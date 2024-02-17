@@ -25,13 +25,17 @@ This section provides an overview of the purpose behind documenting the VirtualB
 
 ## Step 2: Download the Debian or Rocky ISO
 
-- **Debian**: Visit the [Debian download page](https://www.debian.org/download) and download the latest stable ISO file. 
+- **Debian**: Visit the [Debian download page](https://www.debian.org/download) and download the latest stable ISO file. (I chose Debian)
 - **Rocky Linux**: Go to the [Rocky Linux download page](https://rockylinux.org/download) and get the latest stable ISO.
+
+
+![Devian_website](Debian_website.png)
+
 
 --- 
 ### What´s the best option?
 
-If you're new to Linux and looking for a general-purpose operating system to get started with, especially for personal use or learning, Debian is easier and more accessible. It has a vast community and resources to help beginners. Rocky Linux, on the other hand, is more tailored for professional or enterprise server environments where RHEL compatibility is important.
+If you're new to Linux and looking for a _general-purpose operating system to get started with, especially for personal use or learning_, **Debian** is easier and more accessible. It has a vast community and resources to help beginners. **Rocky Linux**, on the other hand, is more tailored for _professional or enterprise server environments_ where RHEL compatibility is important.
 
 ---
 
