@@ -1,20 +1,20 @@
 # Result
 
 
-# Script monitoring (obligatorio)
+# Script monitoring (mandatory)
 
 
 ![Script_monitorig](ScriptMonitoringSH.png)
 
 
-# SSH
+# SSH (mandatory)
 
 local host 4242
 
 ![SSH](SSH.png)
 
 
-# particiones (bonus)
+# partition (bonus)
 
 ![Comprobar particiones](Comprobar_particiones.png)
 
@@ -26,7 +26,7 @@ local host 7080
 ![OpenLiteSpeed](OpenLiteSpeed.png)
 
 
-# Open lite speed cliente (bonus)
+# Open lite speed client (bonus)
 
 local host 8088
 
@@ -38,7 +38,7 @@ local host 8088
 ![WordPress](WorldPress.png)
 
 
-# Wordpress cliente (bonus)
+# Wordpress client (bonus)
 
 local host 80
 
