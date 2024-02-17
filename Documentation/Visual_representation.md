@@ -35,6 +35,8 @@ local host 8088
 
 # Wordpress monitor(bonus)
 
+local host 80
+
 ![Wordpress](Wordpress.png)
 
 
