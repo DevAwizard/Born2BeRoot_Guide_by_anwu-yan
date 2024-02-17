@@ -60,7 +60,15 @@ Your password policy must meet the following criteria:
 
 ### Monitoring Script
 
-Develop a simple script named monitoring.sh in bash. This script, when the server starts, will display certain information (listed below) on all terminals every 10 minutes (check out wall). The script must always show the following information: OS architecture and kernel version, physical and virtual core numbers, current available RAM and its usage percentage, current disk space and its usage percentage, current CPU usage percentage, date and time of the last reboot, whether LVM is active, the number of active connections, the number of server users, the server's IPv4 address and its MAC address, and the number of commands executed with sudo.
+Develop a simple script named monitoring.sh in bash. This script, when the server starts, will display certain information (listed below) on all terminals every 10 minutes (check out wall). 
+The script must always show the following information: 
+- OS architecture and kernel version, physical and virtual core numbers
+- current available RAM and its usage percentage
+- current disk space and its usage percentage, current CPU usage percentage
+- date and time of the last reboot, whether LVM is active
+- the number of active connections, the number of server users
+- the server's IPv4 address and its MAC address
+- the number of commands executed with sudo.
 
 ## Bonus
 
