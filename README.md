@@ -42,6 +42,7 @@ The SSH service must run on port 4242 only. It must not be possible to connect v
 Configure your operating system with UFW (or firewalld in Rocky), leaving only port 4242 open.
 
 ### Hostname and Users
+
 - The hostname of your virtual machine must be your login ending in 42 (e.g., wil42). You must modify this hostname during your evaluation.
 - Implement a strong password policy.
 - Install and configure sudo following strict rules.
@@ -58,9 +59,11 @@ Your password policy must meet the following criteria:
 - For sudo group passwords: authentication with sudo must be limited to three attempts in case of an incorrect password, a custom message must be shown on incorrect password entry, and the input/output of each command executed with sudo must be logged in /var/log/sudo/. TTY mode must be enabled, and secure paths must be specified.
 
 ### Monitoring Script
+
 Develop a simple script named monitoring.sh in bash. This script, when the server starts, will display certain information (listed below) on all terminals every 10 minutes (check out wall). The script must always show the following information: OS architecture and kernel version, physical and virtual core numbers, current available RAM and its usage percentage, current disk space and its usage percentage, current CPU usage percentage, date and time of the last reboot, whether LVM is active, the number of active connections, the number of server users, the server's IPv4 address and its MAC address, and the number of commands executed with sudo.
 
 ## Bonus
+
 Correctly configure partitions to achieve a structure as shown below:
 - Configure a functional WordPress site with lighttpd, MariaDB, and PHP.
 - Configure an additional service of your choice (excluding NGINX/Apache2) that you consider useful. You must justify your choice during the defense.
