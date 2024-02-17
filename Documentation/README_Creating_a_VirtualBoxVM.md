@@ -13,7 +13,12 @@ This section provides an overview of the purpose behind documenting the VirtualB
 1. **Download VirtualBox**:
    
    - Go to the [VirtualBox website](https://www.virtualbox.org/wiki/Downloads) and download the latest version for macOS.
-     
+
+
+![Name_&OperatingSystem](VirtualBox_website.png)
+
+
+
 2. **Install VirtualBox**:
    - Open the downloaded file and follow the installation instructions. You might need to allow the installation in your system preferences due to macOS security settings.
 
@@ -80,3 +85,11 @@ In essence, the default memory size of 1024MB is chosen to ensure that virtual m
 
 4. **Create a Virtual Hard Disk**:
    - Choose "Create a virtual hard disk now", a dynamically allocated disk, and allocate at least 10GB of space.
+  
+**Since I choose 1GB - 1024 MB, the recommended size of the hard disk is 8.GB**
+  
+
+![Hard_disk](Hard_disk.png)
+
+
+
