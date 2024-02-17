@@ -107,9 +107,13 @@ In essence, the default memory size of 1024MB is chosen to ensure that virtual m
    
    - File location and size
 
+### Why 16GB?
+
+Allocating 16GB for file storage ensures you have enough space for the operating system, applications, and additional files without filling up the entire disk. This leaves room for the system to operate smoothly and for future expansion if needed.
+
 ![File_location&size](File_location&size.png)
 
-It ensures you have enough space for the operating system, applications, and additional files without filling up the entire disk. This leaves room for the system to operate smoothly and for future expansion if needed.
+
 
 
 ## Step 4: Configure Your VM
