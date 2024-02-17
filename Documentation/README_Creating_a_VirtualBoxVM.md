@@ -41,7 +41,6 @@ If you're new to Linux and looking for a general-purpose operating system to get
 ![Name_&OperatingSystem](Name_&_operatingSystem.png)
 
 
-
 ### Difference between debian 32-bit & 64-bit
 
 Choosing between a 32-bit and a 64-bit Debian system boils down to how much memory (RAM) you want to use and the type of processor in your computer.
@@ -58,6 +57,12 @@ In simple terms, if your computer is relatively new and has more than 4GB of RAM
 
 
 3. **Allocate RAM**:
-   - Assign at least 2GB (2048 MB) if possible.
+   - Assign the default memory size 1024 (in our case) or 2GB (2048 MB) if possible.
+
+
+
+
+
+
 4. **Create a Virtual Hard Disk**:
    - Choose "Create a virtual hard disk now", a dynamically allocated disk, and allocate at least 10GB of space.
