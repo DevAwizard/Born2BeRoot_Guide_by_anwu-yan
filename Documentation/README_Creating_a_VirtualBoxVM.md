@@ -89,10 +89,15 @@ In essence, the default memory size of 1024MB is chosen to ensure that virtual m
 
 4. **Create a Virtual Hard Disk**:
    - Choose "Create a virtual hard disk now", a dynamically allocated disk, and allocate at least 10GB of space for your Debian or Rocky installation.
-  
-**Since I choose 1GB - 1024 MB, the recommended size of the hard disk is 8.GB**
-  
 
+
+![Hard_disk](Hard_disk.png)
+
+**Since I choose 1GB - 1024 MB, the recommended size of the hard disk is 8.GB**
+
+
+   - Choose VDI (VirtualBox Disk Image)
+  
 ![Hard_disk](Hard_disk.png)
 
 
