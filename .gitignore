@@ -53,4 +53,4 @@ dkms.conf
 
 # Others
 .DS_Store
-*DS_Store
+*.DS_Store
