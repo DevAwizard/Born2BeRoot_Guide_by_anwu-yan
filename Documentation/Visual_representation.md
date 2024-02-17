@@ -42,5 +42,5 @@ local host 8088
 
 local host 80
 
-![WorldPress_lograste](Wordpress_lograste.png)
+![WordPress_lograste](Wordpress_lograste.png)
 
