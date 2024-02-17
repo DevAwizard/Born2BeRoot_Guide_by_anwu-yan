@@ -98,7 +98,7 @@ In essence, the default memory size of 1024MB is chosen to ensure that virtual m
 
    - Choose VDI (VirtualBox Disk Image)
   
-![Hard_disk](Hard_disk.png)
+![Hard_Disk_File_Type](Hard_Disk_FileType.png)
 
 
 ## Step 4: Configure Your VM
