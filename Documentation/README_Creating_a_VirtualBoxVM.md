@@ -100,6 +100,12 @@ In essence, the default memory size of 1024MB is chosen to ensure that virtual m
   
 ![Hard_Disk_File_Type](Hard_Disk_FileType.png)
 
+   - Choose Dynamically allocated
+
+
+![Hard_disk](Hard_disk.png)
+   
+   - 
 
 ## Step 4: Configure Your VM
 
