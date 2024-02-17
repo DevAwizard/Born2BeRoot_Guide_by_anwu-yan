@@ -1,13 +1,13 @@
 # Result
 
 
-# Script monitoring (obligatorio)
+# Script monitoring (mandatory)
 
 
 ![Script_monitorig](ScriptMonitoringSH.png)
 
 
-# SSH
+# SSH (mandatory)
 
 local host 4242
 
