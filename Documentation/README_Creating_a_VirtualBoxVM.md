@@ -35,7 +35,7 @@ This section provides an overview of the purpose behind documenting the VirtualB
 --- 
 ### What´s the best option?
 
-If you're new to Linux and looking for a general-purpose operating system to get started with, especially for personal use or learning, Debian is easier and more accessible. It has a vast community and resources to help beginners. Rocky Linux, on the other hand, is more tailored for professional or enterprise server environments where RHEL compatibility is important.
+If you're new to Linux and looking for a _general-purpose operating system to get started with, especially for personal use or learning_, **Debian** is easier and more accessible. It has a vast community and resources to help beginners. **Rocky Linux**, on the other hand, is more tailored for _professional or enterprise server environments_ where RHEL compatibility is important.
 
 ---
 
