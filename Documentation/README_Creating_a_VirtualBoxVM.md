@@ -103,7 +103,7 @@ In essence, the default memory size of 1024MB is chosen to ensure that virtual m
    - Choose Dynamically allocated
 
 
-![Hard_disk](Choose_onphysicallharddisk.png)
+![Hard_disk](Storage_onphysicallharddisk.png)
    
    - 
 
