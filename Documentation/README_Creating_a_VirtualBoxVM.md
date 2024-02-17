@@ -1,4 +1,4 @@
-# Documentation: Creating a VirtualBox VM
+git# Documentation: Creating a VirtualBox VM
 
 
 ## Introduction
@@ -38,7 +38,8 @@ If you're new to Linux and looking for a general-purpose operating system to get
    - Click on "New" to start creating your virtual machine. Name your VM (e.g., "BornToBeRoot"), select the type (Linux), and version (Debian or other Linux versions depending on your ISO).
 
 
-! Name_&OperatingSystem](Name_&operatingSystem.png)
+![Name_&OperatingSystem](Name_&operatingSystem.png)
+
 
 3. **Allocate RAM**:
    - Assign at least 2GB (2048 MB) if possible.
