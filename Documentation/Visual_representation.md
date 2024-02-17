@@ -35,7 +35,7 @@ local host 8088
 
 # Wordpress monitor(bonus)
 
-![Wordpress](WorldPress.png)
+![Wordpress](Wordpress.png)
 
 
 # Wordpress client (bonus)
