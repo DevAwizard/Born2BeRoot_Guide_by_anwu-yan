@@ -84,12 +84,26 @@ In essence, the default memory size of 1024MB is chosen to ensure that virtual m
 
 
 4. **Create a Virtual Hard Disk**:
-   - Choose "Create a virtual hard disk now", a dynamically allocated disk, and allocate at least 10GB of space.
+   - Choose "Create a virtual hard disk now", a dynamically allocated disk, and allocate at least 10GB of space for your Debian or Rocky installation.
   
 **Since I choose 1GB - 1024 MB, the recommended size of the hard disk is 8.GB**
   
 
 ![Hard_disk](Hard_disk.png)
+
+
+## Step 4: Configure Your VM
+
+
+**1. Select Your VM:** Click on the name of your VM in the VirtualBox main window, then click "Settings".
+
+**2. System:** Go to the System section, and under the Motherboard tab, ensure the boot order includes the optical drive and hard disk, with the optical drive first.
+Under the Processor tab, you can assign more CPUs if you wish, but 1 is enough to start.
+
+**3. Storage:** In the Storage section, next to "Controller: IDE", click on the empty disk icon. Then, on the right side, click the disk icon next to "Optical Drive" and select "Choose a disk file...". Locate and select your downloaded Debian or Rocky ISO.
+
+**4. Network:** Go to the Network section, and in Adapter 1, attached to NAT, ensure it's enabled. This setting will allow your VM to access the internet through your Mac.
+
 
 
 
