@@ -1,4 +1,4 @@
-# Documentation: Creating a VirtualBox VM for "Born to Be Root"
+# Documentation: Creating a VirtualBox VM
 
 
 ## Introduction
