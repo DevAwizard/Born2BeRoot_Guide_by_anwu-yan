@@ -38,9 +38,6 @@ If you're new to Linux and looking for a general-purpose operating system to get
    - Click on "New" to start creating your virtual machine. Name your VM (e.g., "BornToBeRoot"), find the machine folder, select the type (Linux), and version (Debian (64-bit in our case) or other Linux versions depending on your ISO).
 
 
-![Name_&OperatingSystem](Name_&_operatingSystem.png)
-
-
 ### Difference between debian 32-bit & 64-bit
 
 Choosing between a 32-bit and a 64-bit Debian system boils down to how much memory (RAM) you want to use and the type of processor in your computer.
@@ -56,11 +53,28 @@ Choosing between a 32-bit and a 64-bit Debian system boils down to how much memo
 In simple terms, if your computer is relatively new and has more than 4GB of RAM, go for 64-bit Debian to make sure you're using all your hardware's capabilities. If you have an older computer or one with less RAM, 32-bit Debian might be the better choice.
 
 
+![Name_&OperatingSystem](Name_&_operatingSystem.png)
+
+
 3. **Allocate RAM**:
-   - Assign the default memory size 1024 (in our case) or 2GB (2048 MB) if possible.
+   - Assign the default memory size 1024MB (1GB in our case) or 2GB (2048 MB) if possible.
+
+### Why 1024MB?
+
+When setting up a virtual machine (VM), the default memory size is often set to 1024MB (1GB) for a balance of performance and resource allocation. Here’s a simplified explanation:
+
+**- Compatibility:** 1024MB is a moderate amount of RAM that ensures the VM can run most operating systems and basic applications without requiring too much memory from the host machine.
+
+**- Performance:** This amount is chosen as a starting point that provides acceptable performance for lightweight tasks. It's enough to run the system smoothly for basic use, but it's low enough not to strain the host system's resources unnecessarily.
+
+**- Flexibility:** Users can adjust the memory size based on their needs. 1024MB serves as a safe default that works for many scenarios, but you can increase it if you're running more demanding applications or decrease it for simpler tasks to conserve system resources.
+
+**- Resource Management:** Not all users will have a lot of RAM available on their host machines. Setting the default memory size to 1024MB strikes a balance between usability and accessibility, allowing more users to work with VMs without having high-end hardware.
+
+In essence, the default memory size of 1024MB is chosen to ensure that virtual machines are accessible and perform well for a broad range of users and use cases, providing a good starting point that can be adjusted as needed.
 
 
-
+![Memory_size](Memory_size.png)
 
 
 
