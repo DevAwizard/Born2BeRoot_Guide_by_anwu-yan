@@ -245,7 +245,7 @@ In the first segment of our project, we will dive into the initial steps of virt
 - **Rocky Linux**: Go to the [Rocky Linux download page](https://rockylinux.org/download) and get the latest stable ISO.
 
 
-![Devian_website](Screenshots/Debian_website.png)
+![Devian_website](../Images/Debian_website.png)
 
 --- 
 ### What´s the best option?
