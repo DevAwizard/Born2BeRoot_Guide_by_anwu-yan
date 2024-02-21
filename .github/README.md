@@ -206,9 +206,8 @@
   		- [158. Accessing the OpenLiteSpeed Admin Panel](#158-accessing-the-openlitespeed-admin-panel)
  		- [159. Accessing the OpenLiteSpeed Custom Panel](#159-accessing-the-openlitespeed-custom-panel)
 
-[Part 4️⃣: Evaluating Virtualization and Operating System Details on Debian: Commands Overview](#Part-4️⃣-Evaluating-Virtualization-and-Operating-System-Details-on-Debian-Commands-Overview)
+	[Part 4️⃣: Evaluation Criteria](#Part-4️⃣-Evaluation-Criteria)
 
-     Evaluating Virtualization and Operating System Details on Debian: Commands Overview
 ---
 
 ## Introduction
@@ -233,7 +232,7 @@ In the first segment of our project, we will dive into the initial steps of virt
    - Go to the [VirtualBox website](https://www.virtualbox.org/wiki/Downloads) and download the latest version for macOS.
 
 
-![Name_&OperatingSystem](VirtualBox_website.png)
+![Name_&OperatingSystem](Screenshots/VirtualBox_website.png)
 
 
 2. **Install VirtualBox**:
@@ -246,7 +245,7 @@ In the first segment of our project, we will dive into the initial steps of virt
 - **Rocky Linux**: Go to the [Rocky Linux download page](https://rockylinux.org/download) and get the latest stable ISO.
 
 
-![Devian_website](Debian_website.png)
+![Devian_website](Screenshots/Debian_website.png)
 
 --- 
 ### What´s the best option?
@@ -276,7 +275,7 @@ Choosing between a 32-bit and a 64-bit Debian system boils down to how much memo
 
 In simple terms, if your computer is relatively new and has more than 4GB of RAM, go for 64-bit Debian to make sure you're using all your hardware's capabilities. If you have an older computer or one with less RAM, 32-bit Debian might be the better choice.
 
-![Name_&OperatingSystem](Name_&_operatingSystem.png)
+![Name_&OperatingSystem](Screenshots/Name_&_operatingSystem.png)
 
 
 3. **Allocate RAM**:
@@ -296,22 +295,22 @@ When setting up a virtual machine (VM), the default memory size is often set to 
 
 In essence, the default memory size of 1024MB is chosen to ensure that virtual machines are accessible and perform well for a broad range of users and use cases, providing a good starting point that can be adjusted as needed.
 
-![Memory_size](Memory_size.png)
+![Memory_size](Screenshots/Memory_size.png)
 
 4. **Create a Virtual Hard Disk**:
    - Choose "Create a virtual hard disk now", a dynamically allocated disk, and allocate at least 10GB of space for your Debian or Rocky installation.
 
-![Hard_disk](Hard_disk.png)
+![Hard_disk](Screenshots/Hard_disk.png)
 
 **Since I choose 1GB - 1024 MB, the recommended size of the hard disk is 8.GB**
 
    - Choose VDI (VirtualBox Disk Image)
   
-![Hard_Disk_File_Type](Hard_Disk_FileType.png)
+![Hard_Disk_File_Type](Screenshots/Hard_Disk_FileType.png)
 
    - Choose Dynamically allocated
 
-![Hard_disk](Storage_onphysicallharddisk.png)
+![Hard_disk](Screenshots/Storage_onphysicallharddisk.png)
    
    - File location and size
 
@@ -319,12 +318,12 @@ In essence, the default memory size of 1024MB is chosen to ensure that virtual m
 
 Allocating 16GB for file storage ensures you have enough space for the operating system, applications, and additional files without filling up the entire disk. This leaves room for the system to operate smoothly and for future expansion if needed.
 
-![File_location&size](File_location&size.png)
+![File_location&size](Screenshots/File_location&size.png)
 
 ---
 
 This is how it will be demonstrated after doing step 4
-![VirtualMachine_settingdone](VB_settingdone.png)
+![VirtualMachine_settingdone](Screenshots/VB_settingdone.png)
 
 ---
 
@@ -333,38 +332,38 @@ This is how it will be demonstrated after doing step 4
 
 **1. Select Your VM:** Click on the name of your VM in the VirtualBox main window, then click "Settings".
 
-![VirtualMachine_setting](Check_setting_VM.png)
+![VirtualMachine_setting](Screenshots/Check_setting_VM.png)
 
 
 **2. Storage:** In the Storage section, next to "Controller: IDE", click on the empty disk icon. Then, on the right side, click the disk icon next to "Optical Drive" and select "Choose a disk file...". Locate and select your downloaded Debian or Rocky ISO.
 
 
-![Storage_setting](Storage_setting.png)
+![Storage_setting](Screenshots/Storage_setting.png)
 
 
 This is how it should look like when once you have selected your ISO
 
 
-![Storage_settingDONE](Storage_setting_done.png)
+![Storage_settingDONE](Screenshots/Storage_setting_done.png)
 
 
 **3. Network:** Go to the Network section, and in Adapter 1, attached to NAT, ensure it's enabled. This setting will allow your VM to access the internet through your Mac.
 
 
-![Network_setting](Network_setting.png)
+![Network_setting](Screenshots/Network_setting.png)
 
 
 4. Save: Once you have configured your VM, click on OK
 
 
-![Saving_setting](Saving_setting.png)
+![Saving_setting](Screenshots/Saving_setting.png)
 
 
 ## Step 5: Install Debian or Rocky on Your VM
 
 Start the VM: Click "Start" to boot your VM. You'll enter the installation process for Debian or Rocky.
 
-![VirtualStart_setting](Start_setting.png)
+![VirtualStart_setting](Screenshots/Start_setting.png)
 
 ## Installation process
 
@@ -386,47 +385,47 @@ Start the VM: Click "Start" to boot your VM. You'll enter the installation proce
 Once you have click on "START", it might appear the following screen, click on "INSTALL"
 
 
-![VirtualStart_setting](Install.png)
+![VirtualStart_setting](Screenshots/Install.png)
 
 
 #### 2. Choose Preferred Language
 
 Choose the "preferred language" for the installation process
 
-![Language_setting](LanguageSetting.png)
+![Language_setting](Screenshots/LanguageSetting.png)
 
 
 ### Language and Location Configuration
 
 #### 3. Choose Location
 
-![Location_setting](Location_setting.png)
+![Location_setting](Screenshots/Location_setting.png)
 
 
 #### 4. Choose Continent or Region
-![Continent_setting](Continent_setting.png)
+![Continent_setting](Screenshots/Continent_setting.png)
 
 
 #### 5. Choose Country
 
-![Country_setting](Country_setting.png)
+![Country_setting](Screenshots/Country_setting.png)
 
 ### User Configuration
 
 #### 6. Configure Keyboard
 
-![Keyboard_configuration](Keyboard_configuration.png)
+![Keyboard_configuration](Screenshots/Keyboard_configuration.png)
 
 
 #### 7. Choose Hostname
 
 Remember, when writing the hostname must be "your intra login" + 42 
 
-![Hostname_configuration](Hostname_configuration.png)
+![Hostname_configuration](Screenshots/Hostname_configuration.png)
 
 #### 8. Skip Domain Name
 
-![Domain_configuration](Domain_configuration.png)
+![Domain_configuration](Screenshots/Domain_configuration.png)
 
 ### Security Settings
 
@@ -434,41 +433,41 @@ Remember, when writing the hostname must be "your intra login" + 42
 
 Rememeber to save this password, it will be use it again.
 
-![Root_password](Root_password.png)
+![Root_password](Screenshots/Root_password.png)
 
 #### 10. Re-enter Your Password
 
-![Re-enter_root_password](Re-enter_root_password.png)
+![Re-enter_root_password](Screenshots/Re-enter_root_password.png)
 
 
 #### 11. Write Fullname for the New User
 
 TIP: write your intra login
 
-![Full_name-new_user](Full_name-new_user.png)
+![Full_name-new_user](Screenshots/Full_name-new_user.png)
 
 #### 12.Account Username
 
 TIP: write your intra login again
 
-![Account_username](Account_username.png)
+![Account_username](Screenshots/Account_username.png)
 
 
 #### 13. Choose Password for New User
 
 Rememeber to save this password, it will be use it again.
 
-![New_user-password](New_user-password.png)
+![New_user-password](Screenshots/New_user-password.png)
 
 
 #### 14. Re-enter New User Password
 
-![Re-enter_newuser_password](Re-enter_newuser_password.png)
+![Re-enter_newuser_password](Screenshots/Re-enter_newuser_password.png)
 
 
 #### 15. Select Time Zone Location
 
-![Location](Location.png)
+![Location](Screenshots/Location.png)
 
 ### Partitioning and Storage
 
@@ -478,31 +477,31 @@ In this case, we are going to use the "manual" method since im going for the **B
 
 If you only want to complete the **MANDATORY PART**, choose "guided - use entire disk and set up encrypted LVM" since the partition MUST BE ENCRYPTED according to the subject.
 
-![Partitionin_disk_method](Partition_disk_method.png)
+![Partitionin_disk_method](Screenshots/Partition_disk_method.png)
 
 #### 17. Manual Partitioning - Select Partition
 
 Choose the third option -->  SCSI3 (0,0,0) (sda) - 17.2 GB (MEMORY SIZE) ATA VBOX HARDDISK
 
-![Partitionin_disk](Partition_disk1.png)
+![Partitionin_disk](Screenshots/Partition_disk1.png)
 
 
 #### 18.Manual Partitioning - Create New Table
 
 Choose the "YES" option 
 
-![New_empty_partition](New_empty_partition.png)
+![New_empty_partition](Screenshots/New_empty_partition.png)
 
 
 #### 19. Manual Partitioning - Choose Free Space
 
-![Free_space-new_partition](Free_space-new_partition.png)
+![Free_space-new_partition](Screenshots/Free_space-new_partition.png)
 
 #### 20. Manual Partitioning - Use Free Space
 
 Choose create a new partition
 
-![Create_partition](Create_newpartition.png)
+![Create_partition](Screenshots/Create_newpartition.png)
 
 #### 21. Manual Partitioning - New Partition Size
 
@@ -512,13 +511,13 @@ Write 500MB
 
 500 MB is a good size for this specific purpose. It's enough space to hold essential system files for starting up your computer and for recovery tools without taking up too much of your hard drive. This setup helps ensure your computer can boot up smoothly and has the necessary tools available in case you need to fix startup problems.
 
-![New_partition_size](New_partition_size.png)
+![New_partition_size](Screenshots/New_partition_size.png)
 
 ### 22. Manual Partitioning - Partition Type
 
 Choose "PRIMARY"
 
-![Type_new_partition](Type_new_partition.png)
+![Type_new_partition](Screenshots/Type_new_partition.png)
 
 #### What it is?
 
@@ -544,14 +543,14 @@ Choose "BEGINNING"
   
 So, if you're setting up a place for your computer's system or programs, start at the beginning. If it's just for extra storage, the end is okay.
 
-![Location_newpartition](Location_newpartition.png)
+![Location_newpartition](Screenshots/Location_newpartition.png)
 
 
 #### 24. Manual Partitioning - Partition Settings
 
 You will find the following settings:
 
-![Partition_settings](Partition_settings.png)
+![Partition_settings](Screenshots/Partition_settings.png)
 
 Follow the next steps:
 
@@ -562,34 +561,34 @@ Follow the next steps:
 
 It will be appear like this:
 
-![Partition_settings](Setting_boot_done.png)
+![Partition_settings](Screenshots/Setting_boot_done.png)
 
 
 #### 25. Manual Partitioning - Second Disk
 
 Select "pri/log 16/7 G - Free space" option
 
-![2_partition](2_partition.png)
+![2_partition](Screenshots/2_partition.png)
 
 
 #### 26. Manual Partitioning - Use Second Disk Space
 
 Choose create a new partition
 
-![Create_partition](Create_newpartition.png)
+![Create_partition](Screenshots/Create_newpartition.png)
 
 #### 27. Manual Partitioning - Second Disk Size
 
 Write max (lowercase)
 
-![Max_size_partition](Max_size_partition.png)
+![Max_size_partition](Screenshots/Max_size_partition.png)
 
 
 #### 28. Manual Partitioning - Second Disk Type
 
 Choose "LOGICAL"
 
-![Type_new_partition](Type_new_partition.png)
+![Type_new_partition](Screenshots/Type_new_partition.png)
 
 #### What it is?
 A logical partition exists within an extended partition. Think of an extended partition as a big room divided into smaller spaces. These smaller spaces are your logical partitions, where you can store files but typically don't boot an operating system from.
@@ -608,7 +607,7 @@ They are great for organizing your files, like documents, music, and videos, esp
 
 #### 29. Setting Logical Partition
 
-![Setting_logical](Setting_logical.png)
+![Setting_logical](Screenshots/Setting_logical.png)
 
 Follow the next steps:
 
@@ -617,13 +616,13 @@ Follow the next steps:
 - Click on "Done setting up the partition"
 
 It will appear like this:
-![Setting_logical](Setting_logical1.png)
+![Setting_logical](Screenshots/Setting_logical1.png)
 
 ### 30. Primary and Logical Setup Complete
 
 After setting primary and logical partition, it should be looking like this:
 
-![Appearance_setting](Appearance_setting.png)
+![Appearance_setting](Screenshots/Appearance_setting.png)
 
 ---
 
@@ -649,7 +648,7 @@ In summary, **setting up LVM first, then applying encryption to the necessary lo
 
 It´s time to configure the LVM
 
-![Configure_LVM](Configure_LVM.png)
+![Configure_LVM](Screenshots/Configure_LVM.png)
 
 ##### LVM Overview
 
@@ -678,7 +677,7 @@ It´s time to configure the LVM
 #### 32. LVM - Write Changes
 
 Choose "YES"
-![Write_change_disk](Write_change_disk.png)
+![Write_change_disk](Screenshots/Write_change_disk.png)
 
 
 #### 33. LVM Configuration Details
@@ -687,41 +686,41 @@ Follow the next steps:
 
 Click on Display configuration details
 
-![LVM_Configuration](LVM_configuration.png)
+![LVM_Configuration](Screenshots/LVM_configuration.png)
 
 
 #### 34. Volume Group Name
 
 Write LVMGroup
 
-![Volume_groupname](Volume_groupname.png)
+![Volume_groupname](Screenshots/Volume_groupname.png)
 
 
 #### 35. Choose Devices for Volume Group
 
 Select **"/dev/mapper/sda5_crypt"**
 
-![Device_newvolumegroup](Device_newvolumegroup.png)
+![Device_newvolumegroup](Screenshots/Device_newvolumegroup.png)
 
 
 #### 36. LVM - Finalize Changes
 
 Choose "YES"
-![Write_change_disk](Write_change_disk.png)
+![Write_change_disk](Screenshots/Write_change_disk.png)
 
 
 #### 37. Volume Configuration
 
 This is how it appear on the screen
 
-![Display_LVM_configuration](Display_LVM_configuration.png)
+![Display_LVM_configuration](Screenshots/Display_LVM_configuration.png)
 
 
 #### 38. Create Volume Group
 
 When clicking again on "Create volume group", you might need to re-write the name of the volume group, which is LVMGroup.
 
-![Volume_groupname](Volume_groupname.png)
+![Volume_groupname](Screenshots/Volume_groupname.png)
 
 **Just in case:** it is a good practice to verify that you have already created a name for the volume group. 
 
@@ -729,13 +728,13 @@ Important to check whether "used physical volumes and volume groups" has the num
 
 If it is created, it will appear the following message:
 
-![Caution_LVMGroup](Caution_LVMGroup.png)
+![Caution_LVMGroup](Screenshots/Caution_LVMGroup.png)
 
 #### 39. Create Logical Volume
 
 Select the volume group that is already createed "LVMGroup"
 
-![Select_new_logical_volume](Select_new_logical_volume.png)
+![Select_new_logical_volume](Screenshots/Select_new_logical_volume.png)
 
 #### 40. Name Logical Volume
 
@@ -748,7 +747,7 @@ These are:
 6. tmp (bonus part) 
 7. var/log (bonus part)
 
-![Name_logical_name](Name_logical_name.png)
+![Name_logical_name](Screenshots/Name_logical_name.png)
 
 #### 41. Set Logical Volume Size
 
@@ -761,7 +760,7 @@ For 16 GB storage (why 16GB, check step 3 Create a New Virtual Machine: point 4)
 - tmp - 1.6GB
 - var-log - 2GB
 
-![Logical_volume_size](Logical_volume_size.png)
+![Logical_volume_size](Screenshots/Logical_volume_size.png)
 
 --- 
 Remember, for 40 and 41, please proceed with the following steps:
@@ -783,13 +782,13 @@ Volume Physical volumes 1
 Volume groups 1
 Logical volumes must be 7
 
-![Logical_volume_done](Logical_volume_done.png)
+![Logical_volume_done](Screenshots/Logical_volume_done.png)
 
 #### 43. LVM Group Overview
 
 It should appear like this
 
-![Result_logical_volume_configuration](Result_logical_volume_configuration.png)
+![Result_logical_volume_configuration](Screenshots/Result_logical_volume_configuration.png)
 
 #### 44. Partition Configuration Overview
 
@@ -800,7 +799,7 @@ Taking consideration the image of step 43 "Overview of LVM group", you need to f
 
 **REMEMBER** inside of partition settings click on **"USE AS: do not use"**
 
-![Donotuseas](Donotuseas.png)
+![Donotuseas](Screenshots/Donotuseas.png)
 
 
   These are:
@@ -821,11 +820,11 @@ Taking consideration the image of step 43 "Overview of LVM group", you need to f
 
 Sample of partition settings
 
-![Sample_partition_Setting](Sample_partition_Setting.png)
+![Sample_partition_Setting](Screenshots/Sample_partition_Setting.png)
 
 #### 45. Partition Settings Overview
 
-![Overview_resultpartition](Overview_resultpartition.png)
+![Overview_resultpartition](Screenshots/Overview_resultpartition.png)
 
 Given the overview, if your intention is to secure the data on some or all of these logical volumes, the next step would indeed be to configure encrypted volumes. This will protect the data stored within those volumes by requiring a password or key to access it when the system boots up.
 
@@ -841,7 +840,7 @@ Here's what you might consider when proceeding with encryption:
 
 #### 46. Format the partition case
 
-![Format_the_partitition](Format_the_partitition.png)
+![Format_the_partitition](Screenshots/Format_the_partitition.png)
 
 
 The screenshot shows a partition editing screen from an installer, likely for a Linux distribution, where you are given the option to format the partition. The partition in question is labeled as LV tmp, which is commonly used as a temporary storage space (/tmp) by the operating system.
@@ -865,20 +864,20 @@ Unless you have a specific reason to keep existing data in /tmp, which is unusua
 
 Click on " Configure encrypted volumes"
 
-![Configure encrypted volumes](Configure_encrypted_volumes.png)
+![Configure encrypted volumes](Screenshots/Configure_encrypted_volumes.png)
 
 #### 48. Encryption - Write Changes
 
 Select "YES"
 
-![Undone_changePartitionsettings](Undone_changePartitionsettings.png)
+![Undone_changePartitionsettings](Screenshots/Undone_changePartitionsettings.png)
 
 
 #### 49. Encryption Configuration Actions
 
 Select "Create encrypted volues"
 
-![Configuration_encrypted_volume1](Configuration_encrypted_volume1.png)
+![Configuration_encrypted_volume1](Screenshots/Configuration_encrypted_volume1.png)
 
 
 #### 50. Select Devices to Encrypt
@@ -914,7 +913,7 @@ It usually refers to the first partition on the first hard drive recognized by t
 
 Now, select the devices that you consider to be encrypted:
 
-![Select_devicestoencrypt](Select_devicestoencrypt.png)
+![Select_devicestoencrypt](Screenshots/Select_devicestoencrypt.png)
 
 
 Select YES, and then select "Done setting up the partition" for each of the partitions.
@@ -922,20 +921,20 @@ Select YES, and then select "Done setting up the partition" for each of the part
 
 #### 51. Format_the_partitition
 
-![Format_the_partitition](Format_the_partitition.png)
+![Format_the_partitition](Screenshots/Format_the_partitition.png)
 
 #### 52. Confirm Data Erasure for Encryption
 
 Select YES, for encryptation
 
-![Erase_dataEncrypted](Erase_dataEncrypted.png)
+![Erase_dataEncrypted](Screenshots/Erase_dataEncrypted.png)
 
 
 #### 53. Erasing Data for Encryption
 
 We need to wait a 15-25mins of minutes to overwrite the volume.
 
-![Easingdata_for encrytation](Easingdata_forencrytation.png)
+![Easingdata_for encrytation](Screenshots/Easingdata_forencrytation.png)
 
 
 ---
@@ -947,20 +946,20 @@ We need to repeat steps 49 and 50 for all the logical volumes we have chosen to 
 #### 54. Enter Encryption Passphrase
 
 
-![Encryption_passphrase1](Encryption_passphrase1.png)
+![Encryption_passphrase1](Screenshots/Encryption_passphrase1.png)
 
 
 #### 55. Review Encrypted Partition Overview
 
 
-![Re-verify_passphrase_encrypted](Re-verify_passphrase_encrypted.png)
+![Re-verify_passphrase_encrypted](Screenshots/Re-verify_passphrase_encrypted.png)
 
 
 
 #### 56. Complete Overview of Encrypted Partition
 
 
-![Complete_overview_encryrpted_partition](Complete_overview_encryrpted_partition.png)
+![Complete_overview_encryrpted_partition](Screenshots/Complete_overview_encryrpted_partition.png)
 
 Select **"finish parititioning and write changes to disk"**
 
@@ -974,7 +973,7 @@ Select **"finish parititioning and write changes to disk"**
 
 How to fix it 
 
-![Error_Norootfilesystem](Error_Norootfilesystem.png)
+![Error_Norootfilesystem](Screenshots/Error_Norootfilesystem.png)
 
 The message in your screenshot indicates that the installation process has encountered an issue: "No root file system is defined." This typically means that during the installation and partitioning phase, a root filesystem (/) has not been assigned to any partition. The root filesystem is essential because it's the top-level directory of the disk where the operating system files are stored.
 
@@ -1004,11 +1003,11 @@ Configure_VLMagain
 #### 59. Complete Overview of Encrypted Partition
 
 
-![Complete_overview_encryrpted_partition](Complete_overview_encryrpted_partition.png)
+![Complete_overview_encryrpted_partition](Screenshots/Complete_overview_encryrpted_partition.png)
 
 Select **"finish parititioning and write changes to disk"**
 
-![Finish_partitioning_writechanges](Finish_partitioning_writechanges.png)
+![Finish_partitioning_writechanges](Screenshots/Finish_partitioning_writechanges.png)
 
 Do you want to return to the partition menu??
 
@@ -1018,14 +1017,14 @@ Select - No
 
 Once you have selected "NO", it will appear the following screen:
 
-![Changes_to_diskafterfollowingdevicesarechanges](Changes_to_diskafterfollowingdevicesarechanges.png)
+![Changes_to_diskafterfollowingdevicesarechanges](Screenshots/Changes_to_diskafterfollowingdevicesarechanges.png)
 
 
 Select "YES"
 
 #### 61. Failed to attempt to encrypted volume
 
-![Failed_toattemptencryptedvolume](Failed_toattemptencryptedvolume.png)
+![Failed_toattemptencryptedvolume](Screenshots/Failed_toattemptencryptedvolume.png)
 
 
 Since it failed several times i just aborted the installation by executing the comand 
@@ -1036,13 +1035,13 @@ Since it failed several times i just aborted the installation by executing the c
 
 Select No, it is not necessary
 
-![Scan_extrainstallationmedia](Scan_extrainstallationmedia.png)
+![Scan_extrainstallationmedia](Screenshots/Scan_extrainstallationmedia.png)
 
 
 #### 63. Select Mirror Country
 
 
-![Configure_package_manager_select_debian_archive_mirrorcountry](Configure_package_manager_select_debian_archive_mirrorcountry.png)
+![Configure_package_manager_select_debian_archive_mirrorcountry](Screenshots/Configure_package_manager_select_debian_archive_mirrorcountry.png)
 
 
 #### 64. Select Debian Archive Mirror
@@ -1050,27 +1049,27 @@ Select No, it is not necessary
 Choose deb.debian.org
 
 
-![Select_debian_archive_mirror](Select_debian_archive_mirror.png)
+![Select_debian_archive_mirror](Screenshots/Select_debian_archive_mirror.png)
 
 #### 65. Enter HTTP Proxy Information
 
 Keep it in blank 
 
 
-![HTTP_proxyinformation](HTTP_proxyinformation.png)
+![HTTP_proxyinformation](Screenshots/HTTP_proxyinformation.png)
 
 ### Software Selection
 
 #### 66. Software Installation Process
 
 
-![Select_install_sofware](Select_install_sofware.png)
+![Select_install_sofware](Screenshots/Select_install_sofware.png)
 
 
 #### 67. Choose Software to Install
 
 
-![Software_selection](Software_selection.png)
+![Software_selection](Screenshots/Software_selection.png)
 
 
 The options displayed in your screenshot are choices for software that you can install on your system. In short words, here's what each option represents:
@@ -1113,7 +1112,7 @@ Install the GRUB boot loader to your primary drive?
 
 Select "YES"
 
-![GrubBootLoader](GrubBootLoader.png)
+![GrubBootLoader](Screenshots/GrubBootLoader.png)
 
 
 ##### 69. Device for boot loader installation
@@ -1121,21 +1120,21 @@ Select "YES"
 Choose /dev/sda(ata-VBOX_Harddisk_VBb9aab8ab-1db392ef)
 
 
-![Device_loaderforinstallation](Device_loaderforinstallation.png)
+![Device_loaderforinstallation](Screenshots/Device_loaderforinstallation.png)
 
 
 ### Finishing installation
 
 #### 70. Finish installation
 
-![Finishing_installation](Finishing_installation.png)
+![Finishing_installation](Screenshots/Finishing_installation.png)
 
 
 #### 71. Installation complete
 
 Choose continue
 
-![Installation_complete](Installation_complete.png)
+![Installation_complete](Screenshots/Installation_complete.png)
 
 
 ---
@@ -1155,22 +1154,22 @@ In Part 2, we configure Debian on our VM, focusing on system updates, VirtualBox
 #### 72. Starting VirtualBox
 
 
-![Screen 1](Screen1.png)
+![Screen 1](Screenshots/Screen1.png)
 
 
-![Screen2](Screen2.png)
+![Screen2](Screenshots/Screen2.png)
 
 
 #### 73. Verifying User Credentials for System Access
 
 Remember to revise steps 11 and 13
 
-![Screen3](Screen3.png)
+![Screen3](Screenshots/Screen3.png)
 
 
 If you have successfully entered your username and password correctly, the following message will appear on your virtual machine:
 
-![Success_login](Success_login.png)
+![Success_login](Screenshots/Success_login.png)
 
 
 #### 74. Understanding and Using User Prompts
@@ -1232,7 +1231,7 @@ When you see a prompt like this in a Unix or Linux system, it tells you several 
 
 After learning about the su command and its purpose, you should enter su in your virtual machine's terminal and input the root account's password when prompted.
 
-![Su-login](Su-login.png)
+![Su-login](Screenshots/Su-login.png)
 
 
 #### 76. Understanding and Using Root User Prompts
@@ -1294,7 +1293,7 @@ __________________
 This is what it should look like on the screen if you have executed the command correctly:
 
 
-![apt-update_apt-install-sudo](apt-update_apt-install-sudo.png)
+![apt-update_apt-install-sudo](Screenshots/apt-update_apt-install-sudo.png)
 
 
 ##### 🆕 `SUDO`COMMAND
@@ -1343,17 +1342,17 @@ To verify that you have installed apt correctly on your system, you can follow t
 A. **Check Version:** You can check the version of apt installed on your system using the following command:
 
 ```bash
-apt --verion
+apt --version
 ```
 
-![Apt-version](Apt-version.png)
+![Apt-version](Screenshots/Apt-version.png)
 
 B. **Check Package Manager:** You can also use apt itself to check if it's working properly. For example, you can update the package lists to ensure apt can fetch information about available packages:
 
 ```bash
 sudo apt update
 ```
-![Sudo-apt-update](Sudo-apt-update.png)
+![Sudo-apt-update](Screenshots/Sudo-apt-update.png)
 
 
 C. **Install a Package:** You can further verify apt by installing a small package. For example, you can install the htop package, which is a simple interactive process viewer:
@@ -1362,7 +1361,7 @@ C. **Install a Package:** You can further verify apt by installing a small packa
 sudo apt install HTOP
 ```
 
-![Sudo-apt-install-htop](Sudo-apt-install-htop.png)
+![Sudo-apt-install-htop](Screenshots/Sudo-apt-install-htop.png)
 
 
 If does not work properly execute the following command:
@@ -1426,7 +1425,7 @@ Here´s the visual representation:
 In this scenario, the output of `sudo -V` was redirected to a file named `file.txt`. 
 
 
-![Sudo-V](Sudo-V.png)
+![Sudo-V](Screenshots/Sudo-V.png)
 
 
 To view the contents of file.txt, you can use a text editor such as `nano`, `vim`, `cat`, or any other preferred text editor.
@@ -1452,16 +1451,16 @@ Following these instructions, you need to execute the command sudo adduser login
 
 To add a new user to your system, execute the command sudo adduser login in the root user context. This command will prompt you to provide a password for the new user along with other configuration options. Upon completion, a new user with the username "login" will be created on the system.
 
-![Sudo-adduser1](Sudo-adduser1.png)
+![Sudo-adduser1](Screenshots/Sudo-adduser1.png)
 
 After successfully updating the password for the new user, the system will prompt you to enter additional information for the user. In this case, input the relevant user information for "anwuyan1".
 
-![Sudo-adduser2](Sudo-adduser2.png)
+![Sudo-adduser2](Screenshots/Sudo-adduser2.png)
 
 
 However, if you've already created a user with that username during the installation process, you'll receive a message indicating that the user already exists.
 
-![Sudo-addnewuser](Sudo-addnewuser.png)
+![Sudo-addnewuser](Screenshots/Sudo-addnewuser.png)
 
 So, execute the command sudo adduser login as instructed to attempt creating the user, and if the user already exists, you'll receive a notification confirming that.
 
@@ -1475,7 +1474,7 @@ Following the user creation process, we need to create a new group named "user42
 sudo addgroup user42 
 ```
 
-![Sudo-addgroup](Sudo-addgroup.png)
+![Sudo-addgroup](Screenshots/Sudo-addgroup.png)
 
 ##### What does GRID mean 🆔​ ?
 
@@ -1508,7 +1507,7 @@ When you use getent with specific parameters such as passwd, group, or hosts, it
 ```bash
 getent group groupname
 ```
-![Getent-groupuser42](Getent-groupuser42.png)
+![Getent-groupuser42](Screenshots/Getent-groupuser42.png)
 
 
 Replace groupname with the name of the group you want to check. This command retrieves information about the specified group from the system's group database. If the group exists, its details will be displayed.
@@ -1520,7 +1519,7 @@ Replace groupname with the name of the group you want to check. This command ret
 getent group
 ```
 
-![Getent-group](Getent-group.png)
+![Getent-group](Screenshots/Getent-group.png)
 
 ##### Adding User to Multiple Groups Using usermod Command:
 
@@ -1576,7 +1575,7 @@ By employing these commands, you can ensure that the user groups have been creat
 After confirming the user group memberships, the next step is to proceed with configuring the SSH terminal.
 
 
-![Verify_check_usergroup](Verify_check_usergroup.png)
+![Verify_check_usergroup](Screenshots/Verify_check_usergroup.png)
 
 
 ### SSH Configuration
@@ -1601,7 +1600,7 @@ sudo apt update
 This command updates the local package lists from the repositories, ensuring that you have the latest information about available packages and their versions. It's a good practice to run this command before installing any new packages to ensure that you're installing the most recent versions.
 
 
-![sudo-apt_update](sudo-apt_update.png)
+![sudo-apt_update](Screenshots/sudo-apt_update.png)
 
 
 
@@ -1614,7 +1613,7 @@ Once the package lists are updated, you can proceed to install the OpenSSH serve
 sudo apt install openssh-server
 ```
 
-![sudo-apt-sshserverinstall](sudo-apt-sshserverinstall.png)
+![sudo-apt-sshserverinstall](Screenshots/sudo-apt-sshserverinstall.png)
 
 
 
@@ -1622,15 +1621,30 @@ sudo apt install openssh-server
 
 `SSH` stands for Secure Shell. It is a cryptographic network protocol that provides a secure way to access and manage remote devices over an unsecured network, such as the internet. SSH allows users to securely log in to a remote system and execute commands as if they were directly connected to that system's console.
 
-Key features of SSH include:
 
-- **Encryption:** SSH encrypts all data transmitted between the client and the server, including authentication credentials, commands, and data exchanged during the session. This ensures confidentiality and prevents eavesdropping by unauthorized parties.
+Key Features of SSH:
+- **Secure Remote Login**: SSH is widely used for securely logging into remote machines and executing commands. It replaces older, insecure protocols like Telnet, rlogin, and FTP, which transmit data, including passwords, in plaintext, susceptible to eavesdropping.
 
-- **Authentication:** SSH supports various authentication methods, including password-based authentication and public key authentication. Public key authentication offers higher security by using asymmetric cryptography to authenticate users without transmitting passwords over the network.
+- **Secure File Transfer**: SSH also facilitates secure file transfer protocols, such as SCP (Secure Copy Protocol) and SFTP (SSH File Transfer Protocol), allowing encrypted file transfers between computers.
 
-- **Secure Remote Access:** SSH provides a secure method for remotely accessing and managing servers, routers, switches, and other network devices. It allows administrators to perform administrative tasks, transfer files, and troubleshoot systems remotely.
+- **Port Forwarding**: SSH can forward local ports to the remote machine or remote ports to the local machine, enabling secure tunneling of TCP connections. This feature can be used to secure other application protocols like SMTP (email) and HTTP.
 
-- **Port Forwarding:** SSH supports port forwarding, also known as SSH tunneling, which enables secure communication between two endpoints through an encrypted SSH connection. This feature is useful for securely accessing services running on remote systems or bypassing network restrictions.
+- **Key-based Authentication**: While SSH supports password-based authentication, it is more commonly and securely used with public-key cryptography for authentication. Users generate a pair of cryptographic keys, a public key and a private key. The public key is placed on the servers they wish to access, and the private key, which is never shared, is used to authenticate.
+
+- **Encrypted Communications**: SSH uses strong encryption to ensure that all communications (including login credentials and commands) are not readable by others who may have access to the network.
+
+
+Common Uses of SSH:
+- **System Administration**: SSH is a fundamental tool for system administrators for managing servers and networks securely.
+
+- **Secure File Transfers**: Using SCP or SFTP for transferring files between systems securely.
+
+- **Remote System Maintenance and Troubleshooting**: Performing maintenance tasks and troubleshooting issues on remote systems.
+
+- **Secure Access to Git Repositories**: Accessing Git repositories over SSH is common, as it provides a secure method of authentication and data transfer.
+
+- **Creating Secure Tunnels for Other Applications**: SSH tunneling can secure otherwise insecure applications by encrypting the connection from the user's machine to the server.
+
 
 ----
 Some commonly used SSH (Secure Shell) commands along with their explanations:
@@ -1674,7 +1688,7 @@ Use the command `sudo service ssh status` to check the status of the SSH service
 sudo service ssh status
 ```
 
-![sudo-sshservice-status](sudo-sshservice-status.png)
+![sudo-sshservice-status](Screenshots/sudo-sshservice-status.png)
 
 
 #### 89. Configuring SSH Terminal Service
@@ -1728,7 +1742,7 @@ Enter your password when prompted.
 Using the Nano text editor (or another text editor of your choice), you can then make the necessary changes to the SSH server configuration to meet your requirements. Remember to save the changes before exiting the editor.
 
 
-![ssh-configterminal](ssh-configterminal.png)
+![ssh-configterminal](Screenshots/ssh-configterminal.png)
 
 
 🚨 When you see lines starting with `#` in `/etc/ssh/sshd_config`, it means that **those lines are commented out**, and their configurations are not active. These commented lines may include default configuration options or explanations about various settings.
@@ -1738,7 +1752,7 @@ To activate a commented-out configuration option, you would typically **remove t
 
 **It is expected to resemble this**
 
-![Config-sshterminaltworequirements](Config-sshterminaltworequirements.png)
+![Config-sshterminaltworequirements](Screenshots/Config-sshterminaltworequirements.png)
 
 
 #### 91. Restarting SSH Service and Verification
@@ -1761,7 +1775,7 @@ Confirm that the SSH server is now listening on port 4242. You can do this by ex
 
 **It is expected to resemble this**
 
-![verfication_restart_ssh](verfication_restart_ssh.png)
+![verfication_restart_ssh](Screenshots/verfication_restart_ssh.png)
 
 
 ###  Firewall Setup
@@ -1779,7 +1793,7 @@ Here's how to proceed:
 sudo apt install ufw
 ```
 
-![sudo-uwfinstall](sudo-uwfinstall.png)
+![sudo-uwfinstall](Screenshots/sudo-uwfinstall.png)
 
 - When prompted, type 'y' to confirm the installation, and then press Enter.
 
@@ -1787,7 +1801,7 @@ sudo apt install ufw
 - Wait for the installation process to complete. UFW will be installed along with its dependencies.
 
 
-![uwf-install1](uwf-install1.png)
+![uwf-install1](Screenshots/uwf-install1.png)
 
 
 
@@ -1842,7 +1856,7 @@ sudo ufw enable
 
 Enabling UFW activates the firewall and applies any configured rules, providing a basic level of security for your system. After enabling UFW, you can proceed to configure firewall rules to allow or deny specific types of traffic according to your requirements.
 
-![enable-ufw](enable-ufw.png)
+![enable-ufw](Screenshots/enable-ufw.png)
 
 
 #### 94. Allowing Connections on Port
@@ -1865,7 +1879,7 @@ Configuring UFW to allow specific ports while blocking others helps enhance the 
 
 
 
-![sudo-allowport4242](sudo-allowport4242.png)
+![sudo-allowport4242](Screenshots/sudo-allowport4242.png)
 
 
 #### 95. Verifying UFW Status
@@ -1878,7 +1892,7 @@ sudo ufw status
 
 This command will display the current status of the UFW firewall, including whether it is enabled or disabled, as well as the configured rules. By examining the status output, you can confirm that the firewall is active and that the rule allowing connections on port 4242 has been successfully applied.
 
-![sudo_ufw_status](sudo_ufw_status.png)
+![sudo_ufw_status](Screenshots/sudo_ufw_status.png)
 
 ### Configuring Sudo Settings
 
@@ -1896,7 +1910,7 @@ sudo touch /etc/sudoers.d/sudo_config
 This command will create an empty file named sudo_config in the specified directory. After creating this file, you can proceed with configuring the password settings as needed.
 
 
-![sudo_password_config](sudo_password_config.png)
+![sudo_password_config](Screenshots/sudo_password_config.png)
 
 
 #### 97. Creating sudo Directory for Command Logs
@@ -1966,7 +1980,7 @@ These commands collectively configure various settings related to password requi
 
 
 
-![editing_sudo_confg](editing_sudo_confg.png)
+![editing_sudo_confg](Screenshots/editing_sudo_confg.png)
 
 
 #### 99. Verification of Sudo Configuration Changes
@@ -2010,7 +2024,7 @@ Here's a breakdown of each component:
 - **`/etc/login.defs`**: This is the path to the file being opened. In this case, it's the login.defs file located in the /etc directory. This file typically contains configuration settings related to user login and password policies.
 
 
-![log_file_overview](log_file_overview.png)
+![log_file_overview](Screenshots/log_file_overview.png)
 
 #### 101. Configuring Strong Password Policy in login.defs File
 
@@ -2028,7 +2042,7 @@ DIFOK 7                 # Set number of characters that must differ from previou
 ```
 
 
-![PASS_DAYS](PASS_DAYS.png)
+![PASS_DAYS](Screenshots/PASS_DAYS.png)
 
 
 #### 102. Installing Required Packages for Password Policy Configuration
@@ -2041,7 +2055,7 @@ sudo apt install libpam-pwquality
 
 It installs the libpam-pwquality package, which provides the PAM (Pluggable Authentication Modules) password quality module needed to enforce the desired password policy. By running sudo apt install libpam-pwquality and confirming the installation with 'Y', the package will be installed, allowing us to proceed with the configuration.
 
-![pwquality-config](pwquality-config.png)
+![pwquality-config](Screenshots/pwquality-config.png)
 
 
 #### 103. Editing common-password Configuration File
@@ -2056,7 +2070,7 @@ You can edit the the login.defs file using the following command:
 sudo nano /etc/pam.d/common-password
 ```
 
-![Config_commonpassword](Config_commonpassword.png)
+![Config_commonpassword](Screenshots/Config_commonpassword.png)
 
 After the line retry=3, we need to add the following commands:
 
@@ -2080,7 +2094,7 @@ After the line retry=3, we need to add the following commands:
 
 **It is expected to resemble this**
 
-![AFTER_RETRY3](AFTER_RETRY3.png)
+![AFTER_RETRY3](Screenshots/AFTER_RETRY3.png)
 
 
 **QUESTION**
@@ -2106,11 +2120,11 @@ Here's a breakdown of the steps:
 
 - **Configure Network Settings**: Within the virtual machine's settings, navigate to the "Network" tab or section. Here, you may need to adjust the network adapter settings to enable network connectivity for the virtual machine. You might configure a bridged adapter, NAT, or host-only adapter, depending on your network setup and requirements.
 
-![SSH_SERVER_INSTALLATION](SSH_SERVER_INSTALLATION.png)
+![SSH_SERVER_INSTALLATION](Screenshots/SSH_SERVER_INSTALLATION.png)
 
 - **Set Up Port Forwarding (if necessary)**: If you're using NAT or host-only networking, you may need to set up port forwarding to allow SSH connections from your host machine to the virtual machine. Configure port forwarding rules to forward connections from a specific port on your host machine to port 22 (the default SSH port) on the virtual machine.
 
-![Port4242_Set](Port4242_Set.png)
+![Port4242_Set](Screenshots/Port4242_Set.png)
 
 - **Save Settings and Start the Virtual Machine**: Once you've configured the network settings and any necessary port forwarding, save the changes to the virtual machine's settings and start the virtual machine.
 
@@ -2200,7 +2214,7 @@ Once this is done, you shouldn’t get the “Warning: Remote host identificatio
 ​✔️​ If the SSH connection is established successfully, you will typically see a login prompt in your terminal, indicating that you have successfully connected to the remote machine. 
 
 
-![SSH](SSH.png)
+![SSH](Screenshots/SSH.png)
 
 
 Once you see the login prompt, you can proceed to enter your password or any other authentication credentials required to log in to the remote machine. Upon successful authentication, you will be granted access to the remote machine's command line interface or shell, allowing you to interact with the system as if you were physically present at the machine itself.
@@ -2217,7 +2231,7 @@ To view the architecture of the operating system along with its kernel version, 
 uname -a
 ```
 
-![Uname-a](Uname-a.png)
+![Uname-a](Screenshots/Uname-a.png)
 
 Executing this command will display detailed information about the system's architecture and kernel version. It's a quick and convenient way to gather essential details about the operating system configuration.
 
@@ -2241,7 +2255,7 @@ This command performs the following tasks:
 This command sifts through the /proc/cpuinfo file, which holds processor information, specifically looking for occurrences of the string "physical id". Then, by using wc -l, it tallies the number of instances found. This method ensures an accurate count of physical cores, accommodating scenarios involving multiple processors.
 
 
-![Fisical_core](Fisical_core.png)
+![Fisical_core](Screenshots/Fisical_core.png)
 
 
 #### 107. Virtual Cores
@@ -2264,7 +2278,7 @@ Here's a breakdown of how this command works:
 The usage is nearly identical to the previous command, except that instead of counting the lines that contain "physical id", we count the occurrences of "processor". This method is chosen because, like before, the way to quantify starts at 0 if there is one processor.
 
 
-![Virtual_core](Virtual_core.png)
+![Virtual_core](Screenshots/Virtual_core.png)
 
 
 #### 108. Displaying RAM Information
@@ -2299,7 +2313,7 @@ Let's break down this command to understand how it works:
    - **`{print $3}`** is the action awk takes when the condition is met. It tells awk to print the third field of the line that matches the condition. In the context of the free --mega command's output, the third field on the "Mem:" line represents the amount of used memory (in MB).
 
 
-![RAM_COMMAND](RAM_COMMAND.png)
+![RAM_COMMAND](Screenshots/RAM_COMMAND.png)
 
 
 **Displaying Total Memory**:
@@ -2327,7 +2341,7 @@ This symbol is used to direct the output of the preceding command (free --mega) 
    - **`{print $2}`** is the action executed by awk when the condition is true. It instructs awk to output the second field of the line matching the condition. In the output of the free --mega command, the second field on the "Mem:" line represents the total physical memory (in MB) available on the system.
 
 
-![RAMCOMMAND1](RAMCOMMAND1.png)
+![RAMCOMMAND1](Screenshots/RAMCOMMAND1.png)
 
 
 **Calculating Memory Usage Percentage**:
@@ -2362,7 +2376,7 @@ printf is a function that formats and prints data. "(%.2f%%)\n" is the format st
    - **`\n`**ensures that the output is followed by a new line for clean presentation.
 
 
-![RAMCOMAND2](RAMCOMAND2.png)
+![RAMCOMAND2](Screenshots/RAMCOMAND2.png)
 
 
 #### 109. Memory disk
@@ -2393,7 +2407,7 @@ The command mentioned earlier, **`df -m | grep "/dev/" | grep -v "/boot" | awk '
 - Excluding lines related to the boot partition (/boot), which is usually not necessary for a general overview of occupied disk memory.
 - Summing up the used space (the third column in the df output, hence $3) across these filtered lines to get a total of how much disk space is currently occupied, excluding the boot partition.
 
-![MemoryDisk](MemoryDisk.png)
+![MemoryDisk](Screenshots/MemoryDisk.png)
 
 
 **Obtaining Total Disk Space**
@@ -2429,7 +2443,7 @@ Let's break down this command to understand its components and functionality:
    - **`END {printf("(%d%%)\n", use/total*100)}`**: After processing all lines of input, this part of the script executes. It calculates the percentage of disk space used by dividing the total used space (use) by the total space (total) and multiplying by 100. The printf function then formats this value as an integer percentage, followed by a percent sign, and ensures the output is followed by a newline character (\n).
 
 
-![Memorydisk1](Memorydisk1.png)
+![Memorydisk1](Screenshots/Memorydisk1.png)
 
 
 #### 110. CPU usage percentage
@@ -2477,7 +2491,7 @@ Let's break down this command to understand its components and functionality:
 - **`{print $15}`** instructs awk to print the 15th field (column) of the input line it receives. In the context of vmstat output, the 15th field typically corresponds to the percentage of time the CPU was idle during the last interval reported. This means it was not running any processes and was waiting for tasks.
 
 
-![CPU_USAGE](CPU_USAGE.png)
+![CPU_USAGE](Screenshots/CPU_USAGE.png)
 
 tail -1: This option tells tail to output the last line of the input it receives. The -1 specifies the number of lines from the end of the file (or input stream) to display, which in this case is just the very last line. This is the correct usage for wanting to process only the latest output from vmstat, for example.
 
@@ -2521,7 +2535,7 @@ The output format breaks down as follows:
 - `$6`: Year (2024)
 
 
-![Date_Hour](Date_Hour.png)
+![Date_Hour](Screenshots/Date_Hour.png)
 
 
 #### 112. Checking for Active LVM on the System
@@ -2554,7 +2568,7 @@ Here's a breakdown of how this command works:
 - If false, meaning the count is 0, no LVM volumes are detected, and the script echoes "no".
 
 
-![USAGE_LVM](USAGE_LVM.png)
+![USAGE_LVM](Screenshots/USAGE_LVM.png)
 
 
 #### 113. Counting Established TCP Connections
@@ -2584,7 +2598,7 @@ grep ESTAB filters the list of TCP sockets to only include those that are in the
 - **`-l`** option specifies that it should count lines
 
 
-![TCP](TCP.png)
+![TCP](Screenshots/TCP.png)
 
 
 #### 114. Counting Current User Sessions
@@ -2607,7 +2621,7 @@ users | wc -w
 - Since wc -w counts every word in the input, the total number reflects the number of user sessions, not necessarily the number of unique users. This means if a user is logged into multiple sessions, they will be counted multiple times.
 
 
-![USER](USER.png)
+![USER](Screenshots/USER.png)
 
 
 
@@ -2623,7 +2637,7 @@ hostname -I
 The hostname command, when used with the -I option, displays all network addresses (IP addresses) associated with the host. This can include both IPv4 and IPv6 addresses. It provides a simple way to quickly identify the machine's IP addresses without delving into specific network interfaces.
 
 
-![IP_ADDRESS](IP_ADDRESS.png)
+![IP_ADDRESS](Screenshots/IP_ADDRESS.png)
 
 
 
@@ -2645,7 +2659,7 @@ Here’s how the process works:
 
  -**`awk '{print $2}'`**:Finally, awk is used to extract and print only the second field of the filtered lines, which corresponds to the MAC address itself. awk is a powerful text processing tool, and in this context, it's used to neatly isolate the MAC address from the rest of the information.
 
-![MAC_ADDRESS](MAC_ADDRESS.png)
+![MAC_ADDRESS](Screenshots/MAC_ADDRESS.png)
 
 
 #### 117. Counting Commands Executed with Sudo
@@ -2674,7 +2688,7 @@ Here's how the process works:
 - To verify its functionality, you can execute a command using sudo, then rerun the journalctl _COMM=sudo | grep COMMAND | wc -l command. The count should increase by one, reflecting the newly executed sudo command.
 
 
-![SUDO_COMMANDS](SUDO_COMMANDS.png)
+![SUDO_COMMANDS](Screenshots/SUDO_COMMANDS.png)
 
 
 #### 118. Total Script Execution Result
@@ -2756,13 +2770,13 @@ When you execute sh monitoring.sh, here's what happens step by step:
 - **Sudo Commands ($cmnd)**: Counts the number of commands executed with sudo.
 
 
-![SCRIPT_RESULTS1](SCRIPT_RESULTS1.png)
+![SCRIPT_RESULTS1](Screenshots/SCRIPT_RESULTS1.png)
 
 
-![SCRIPT_RESULTS2](SCRIPT_RESULTS2.png)
+![SCRIPT_RESULTS2](Screenshots/SCRIPT_RESULTS2.png)
 
 
-![SH_MONITORING](SH_MONITORING.png)
+![SH_MONITORING](Screenshots/SH_MONITORING.png)
 
 
 Common Issues and Solutions:
@@ -2799,7 +2813,7 @@ More detailed explanation (If you wish, skip this part, up to you !)
 - Commands:
     - Total: ram_total=$(free --mega | awk '$1 == "Mem:" {printf $2}')
     - Used: ram_use=$(free --mega | awk '$1 == "Mem:" {printf $3}')
-- Percentage: ram_percent=$(free --mega | awk '$1 == "Mem:" {printf("%.2f%%"), $3/$2*100}')
+    - Percentage: ram_percent=$(free --mega | awk '$1 == "Mem:" {printf("%.2f%%"), $3/$2*100}')
 - Explanation: Uses free to fetch memory usage in megabytes, parsing total, used, and calculating the percentage of used memory.
 - Significance: Shows how much memory is being utilized, critical for performance monitoring.
 
@@ -2817,45 +2831,45 @@ Commands:
 - Significance: Indicates the current workload on the CPU, with higher values suggesting more activity.
 
 **7. Last Boot (lb)**
-Command: lb=$(who -b | awk '$1 == "system" {print $3 " " $4}')
-Explanation: Extracts the last system boot time from the who command output.
-Significance: Useful for tracking system uptime and maintenance windows.
+- Command: lb=$(who -b | awk '$1 == "system" {print $3 " " $4}')
+- Explanation: Extracts the last system boot time from the who command output.
+- Significance: Useful for tracking system uptime and maintenance windows.
 
 **8. LVM Use (lvmu)**
-Command: lvmu=$(lsblk | grep "lvm" | wc -l > 0 && echo yes || echo no)
-Explanation: Checks if any block devices use LVM. Outputs "yes" if LVM is found, "no" otherwise.
-Significance: Indicates whether the Logical Volume Manager is in use, affecting disk management strategies.
+- Command: lvmu=$(lsblk | grep "lvm" | wc -l > 0 && echo yes || echo no)
+- Explanation: Checks if any block devices use LVM. Outputs "yes" if LVM is found, "no" otherwise.
+-Significance: Indicates whether the Logical Volume Manager is in use, affecting disk management strategies.
 
 **9. TCP Connections (tcpc)**
-Command: tcpc=$(ss -ta | grep ESTAB | wc -l)
-Explanation: Counts established TCP connections by filtering the ss command output.
-Significance: Reflects the system's network activity level and potential load.
+- Command: tcpc=$(ss -ta | grep ESTAB | wc -l)
+- Explanation: Counts established TCP connections by filtering the ss command output.
+-Significance: Reflects the system's network activity level and potential load.
 
 **10. User Log (ulog)**
-Command: ulog=$(users | wc -w)
-Explanation: Counts the number of user sessions by listing logged-in users and counting the words.
-Significance: Shows how many user sessions are active, useful for assessing system access.
+- Command: ulog=$(users | wc -w)
+- Explanation: Counts the number of user sessions by listing logged-in users and counting the words.
+- Significance: Shows how many user sessions are active, useful for assessing system access.
 
 **11. Network (ip and mac)**
-Commands:
-IP: ip=$(hostname -I)
-MAC: mac=$(ip link | grep "link/ether" | awk '{print $2}')
-Explanation: Retrieves the system's IP addresses and the MAC addresses of network interfaces.
-Significance: Provides network identity information, critical for networking and security purposes.
+- Commands:
+  - IP: ip=$(hostname -I)
+  - MAC: mac=$(ip link | grep "link/ether" | awk '{print $2}')
+- Explanation: Retrieves the system's IP addresses and the MAC addresses of network interfaces.
+- Significance: Provides network identity information, critical for networking and security purposes.
 
 **12. Sudo Commands (cmnd)**
-Command: cmnd=$(journalctl _COMM=sudo | grep COMMAND | wc -l)
-Explanation: Counts the number of commands executed with sudo privileges by querying the system journal.
-Significance: Indicates the frequency of elevated command executions, relevant for security and auditing.
+- Command: cmnd=$(journalctl _COMM=sudo | grep COMMAND | wc -l)
+- Explanation: Counts the number of commands executed with sudo privileges by querying the system journal.
+- Significance: Indicates the frequency of elevated command executions, relevant for security and auditing.
 
 
 **`grep`**
-Explanation: grep is a command-line utility for searching plain-text data sets for lines that match a regular expression. It's widely used to filter and search for specific patterns within files or command output.
-Significance: Essential for parsing logs, files, or command output to find specific information, such as looking for "processor" entries in /proc/cpuinfo.
+- Explanation: grep is a command-line utility for searching plain-text data sets for lines that match a regular expression. It's widely used to filter and search for specific patterns within files or command output.
+- Significance: Essential for parsing logs, files, or command output to find specific information, such as looking for "processor" entries in /proc/cpuinfo.
 
 **`awk`**
-Explanation: awk is a programming language designed for text processing and typically used as a command-line tool. It's powerful for pattern scanning and processing, often used for data extraction and reporting.
-Significance: In scripts, it's used for complex parsing tasks, calculations, and formatting output, such as calculating used memory percentage or formatting disk space usage.
+- Explanation: awk is a programming language designed for text processing and typically used as a command-line tool. It's powerful for pattern scanning and processing, often used for data extraction and reporting.
+- Significance: In scripts, it's used for complex parsing tasks, calculations, and formatting output, such as calculating used memory percentage or formatting disk space usage.
 
 **`cmnd`**
 - Explanation: In the context of your script, cmnd is a variable that typically stores the result of a command. Here, it might be used to hold the count of commands executed with sudo, as extracted from the system's journal.
@@ -2937,16 +2951,12 @@ Here's a breakdown of how crontab works and how to use it:
 - **Reliability**: Once configured, tasks will continue to run at scheduled intervals without further intervention.
 
 
-![Crontab](Crontab.png)
+![Crontab](Screenshots/Crontab.png)
 
 
 
 
-![Crontab1](Crontab1.png)
-
-
-
-
+![Crontab1](Screenshots/Crontab1.png)
 
 
 ---
@@ -2968,7 +2978,7 @@ This command installs the lighttpd web server on your system, making it capable 
 sudo apt install lighttpd
 ```
 
-![Lighttpd_install](Lighttpd_install.png)
+![Lighttpd_install](Screenshots/Lighttpd_install.png)
 
 
 
@@ -2982,7 +2992,7 @@ sudo ufw allow 80
 
 This command configures the firewall to allow incoming connections on port 80, which is the default port used by web servers to serve HTTP traffic.
 
-![Connections_80port](Connections_80port.png)
+![Connections_80port](Screenshots/Connections_80port.png)
 
 
 #### 122. Verifying Port 80 is Allowed
@@ -2995,7 +3005,7 @@ sudo ufw status
 
 You should see port 80 listed as allowed in your firewall's configuration. This verification ensures that your web server can receive incoming connections on port 80 without being blocked by the firewall.
 
-![sudo_ufw_Statuscheck](sudo_ufw_Statuscheck.png)
+![sudo_ufw_Statuscheck](Screenshots/sudo_ufw_Statuscheck.png)
 
 
 
@@ -3004,7 +3014,7 @@ You should see port 80 listed as allowed in your firewall's configuration. This 
 The next step is to add a specific rule that includes port 80 in your port forwarding configuration. If you're unsure how to add rules for port forwarding, you can refer to the instructions provided in your virtual machine or router's documentation. This typically involves going to the machine's network settings, finding the port forwarding section, and replicating the settings as shown in an example or screenshot provided.
 
 
-![Port_check_ufw](Port_check_ufw.png)
+![Port_check_ufw](Screenshots/Port_check_ufw.png)
 
 
 ### WordPress
@@ -3020,7 +3030,7 @@ This step involves installing wget and zip on your system using the following co
 sudo apt install wget zip
 ```
 
-![Install_wget_zip](Install_wget_zip.png)
+![Install_wget_zip](Screenshots/Install_wget_zip.png)
 
 wget is used for downloading files from the internet, and zip is for handling zip archives. This preparation is crucial for obtaining and unpacking the latest version of WordPress.
 
@@ -3053,7 +3063,7 @@ English version
 sudo wget https://wordpress.org/latest.zip
 ```
 
-![Install_wordpressENG](Install_wordpressENG.png)
+![Install_wordpressENG](Screenshots/Install_wordpressENG.png)
 
 
 Choosing the preferred language for your WordPress installation allows you to tailor the website experience to your or your audience's linguistic preferences. 
@@ -3079,7 +3089,7 @@ sudo unzip latest.zip
 ```
 
 
-![Undo_zip_wordpress](Undo_zip_wordpress.png)
+![Undo_zip_wordpress](Screenshots/Undo_zip_wordpress.png)
 
 This step unpacks the WordPress files, preparing them for the installation process.
 
@@ -3151,7 +3161,7 @@ apt install mariadb-server
 MariaDB is a popular open-source database management system and a drop-in replacement for MySQL.
 
 
-![mariadb-server_install](mariadb-server_install.png)
+![mariadb-server_install](Screenshots/mariadb-server_install.png)
 
 #### 132. Securing MariaDB Installation
 
@@ -3162,7 +3172,7 @@ After installation, MariaDB's default configuration is not secure. To enhance se
 sudo mysql_secure_installation
 ```
 
-![sudo_secure_installation](sudo_secure_installation.png)
+![sudo_secure_installation](Screenshots/sudo_secure_installation.png)
 
 ```bash
 Switch to unix_socket autentication? → N
@@ -3173,7 +3183,7 @@ Remove test database and acces to it? → Y
 Reaload privilege tables now? → Y
 ```
 
-![succes_installing_mariadb](succes_installing_mariadb.png)
+![succes_installing_mariadb](Screenshots/succes_installing_mariadb.png)
 
 
 #### 133. Accessing MariaDB
@@ -3184,7 +3194,7 @@ The next step is to access MariaDB to begin database and user configuration. Thi
 Mariadb
 ```
 
-![Access_Marialabdd](Access_Marialabdd.png)
+![Access_Marialabdd](Screenshots/Access_Marialabdd.png)
 
 
 #### 134. Creating a WordPress Database
@@ -3198,7 +3208,7 @@ CREATE DATABASE wp_database;
 This database will store all WordPress-related data.
 
 
-![Database_createwp](Database_createwp.png)
+![Database_createwp](Screenshots/Database_createwp.png)
 
 
 #### 135. Verifying the Database Creation
@@ -3211,7 +3221,7 @@ SHOW DATABASES;
 
 This allows you to confirm the presence of wp_database among the listed databases.
 
-![Show_Database](Show_Database.png)
+![Show_Database](Screenshots/Show_Database.png)
 
 
 #### 136.Creating a Database User
@@ -3225,7 +3235,7 @@ CREATE USER 'anwuyan-'@'localhost' IDENTIFIED BY '12345';
 
 This user (anwuyan-) will be used to manage the WordPress database, ensuring operations are performed under a specific user account rather than using the root account.
 
-![Create_databaseuser](Create_databaseuser.png)
+![Create_databaseuser](Screenshots/Create_databaseuser.png)
 
 
 **🆕​ LOCAL HOST**
@@ -3244,7 +3254,7 @@ GRANT ALL PRIVILEGES ON wp_database.* TO 'yourusername'@'localhost';
 
 This step is crucial for allowing the user full access to the database for all operations required by WordPress.
 
-![Grant_all_privileges](Grant_all_privileges.png)
+![Grant_all_privileges](Screenshots/Grant_all_privileges.png)
 
 
 #### 138. Flushing Privileges
@@ -3258,7 +3268,7 @@ FLUSH PRIVILEGES;
 
 This command updates the system's privilege tables, making the new permissions effective immediately.
 
-![Flushpriviledges](Flushpriviledges.png)
+![Flushpriviledges](Screenshots/Flushpriviledges.png)
 
 
 #### 139. Exiting MariaDB
@@ -3272,7 +3282,7 @@ MariaDB
 This concludes the database setup process for WordPress.
 
 
-![Bye_exit_mariadb](Bye_exit_mariadb.png)
+![Bye_exit_mariadb](Screenshots/Bye_exit_mariadb.png)
 
 
 ### PHP
@@ -3300,7 +3310,7 @@ Here's a breakdown of the command and its components:
 - **`php-mysql`**: This package is a PHP extension that allows PHP code to connect to MySQL databases. It provides the necessary functions to communicate with MySQL databases, including operations like connecting to a database, querying the database, and managing retrieved data. This is essential for web applications that need to store or retrieve data from a MySQL database.
 
 
-![PHP_install](PHP_install.png)
+![PHP_install](Screenshots/PHP_install.png)
 
 
 ### WordPress Configuration
@@ -3356,7 +3366,7 @@ Modify password_here to 12345
 
 ```
 
-![Editing_WPConfiguration](Editing_WPConfiguration.png)
+![Editing_WPConfiguration](Screenshots/Editing_WPConfiguration.png)
 
 
 
@@ -3529,7 +3539,6 @@ How to Fix:
 ----
 
 
-
 ### WordPress Site
 
 #### 147 . Accessing Your Site
@@ -3539,7 +3548,7 @@ Once you have completed the previous steps, you can go back to your browser and 
 WP-SCREEN
 
 
-![WP-SCREEN](WP-SCREEN.png)
+![WP-SCREEN](Screenshots/WP-SCREEN.png)
 
 
 
@@ -3550,7 +3559,7 @@ This step describes how to access the WordPress installation wizard by navigatin
 You need to fill in all the fields. In my case, I've entered the following:
 
 
-![WP-SCREEN1](WP-SCREEN1.png)
+![WP-SCREEN1](Screenshots/WP-SCREEN1.png)
 
 
 During the WordPress installation process, you're prompted to fill out a form with details such as database connection information and site settings. This step involves entering the necessary information to connect WordPress to its database and configure basic site settings.
@@ -3559,7 +3568,7 @@ During the WordPress installation process, you're prompted to fill out a form wi
 
 Once you have filled in all the fields, click on "Install WordPress," and you will have finished the installation. The following tab will appear. Now, WordPress can create the tables and dump all the data it needs to function into the database you have assigned.
 
-![WP-SCREEN2](WP-SCREEN2.png)
+![WP-SCREEN2](Screenshots/WP-SCREEN2.png)
 
 This step involves finalizing the WordPress installation. By clicking "Install WordPress," the installer will create the necessary database tables and populate them with the initial data required for WordPress to operate.
 
@@ -3567,7 +3576,7 @@ This step involves finalizing the WordPress installation. By clicking "Install W
 
 If you access your localhost from the browser again, you can now see your functional page.
 
-![WP-SCREEN3](WP-SCREEN3.png)
+![WP-SCREEN3](Screenshots/WP-SCREEN3.png)
 
 
 
@@ -3580,11 +3589,11 @@ If you want to access the admin panel to make changes to your page, you should t
 
 
 
-![WP-SCREEN4](WP-SCREEN4.png)
+![WP-SCREEN4](Screenshots/WP-SCREEN4.png)
 
 
 
-![WP-SCREEN5](WP-SCREEN5.png)
+![WP-SCREEN5](Screenshots/WP-SCREEN5.png)
 
 This step guides you on how to access the WordPress admin dashboard, where you can manage your site. By going to localhost/wp-admin and logging in, you gain access to the backend of your WordPress site for customization and management.
 
@@ -3595,9 +3604,9 @@ Once you access it, you can modify whatever you want to your own liking. Customi
 
 
 
-![WP-SCREEN6](WP-SCREEN6.png)
+![WP-SCREEN6](Screenshots/WP-SCREEN6.png)
 
-![WP-SCREEN7](WP-SCREEN7.png)
+![WP-SCREEN7](Screenshots/WP-SCREEN7.png)
 
 This final step highlights that once logged into the WordPress admin dashboard, you have the freedom to customize and manage your site as desired. The guide notes that customization is beyond its scope and thus won't be covered in detail.
 
@@ -3638,7 +3647,7 @@ Downloads and executes the script from the OpenLiteSpeed repository to add it to
 If you see the following error message in your terminal, execute the following command:
 
 
-![ErrorLITESPEED](ErrorLITESPEED.png)
+![ErrorLITESPEED](Screenshots/ErrorLITESPEED.png)
 
 
 ```bash
@@ -3676,7 +3685,7 @@ sudo apt install openlitespeed
 
 Installs OpenLiteSpeed from the newly added repository.
 
-![WP-SCREEN8](WP-SCREEN8.png)
+![WP-SCREEN8](Screenshots/WP-SCREEN8.png)
 
 
 
@@ -3740,7 +3749,7 @@ Replace the Certificate: For a production environment or if you want to avoid se
 This will take you to the login page of the OpenLiteSpeed admin panel. Here, you will need to enter the login credentials you set or updated in the previous step. Once you provide your username and password, you will gain access to the OpenLiteSpeed admin panel.
 
 
-![OPEN_LITE_SPEED](OPEN_LITE_SPEED.png)
+![OPEN_LITE_SPEED](Screenshots/OPEN_LITE_SPEED.png)
 
 
 #### 159. Accessing the OpenLiteSpeed Custom panel
@@ -3757,7 +3766,7 @@ After setting up OpenLiteSpeed and adjusting its administrative password, you mi
 - Testing and Development: Accessing your site through localhost:8088 is primarily for testing and development. It allows developers and site administrators to view and interact with web content as an end-user would, without making the site publicly accessible on the internet.
 - Local Preview: Before deploying changes live, you can preview updates, ensuring everything functions as expected in a controlled, local environment.
 
-![OPEN_LITESPEED1](OPEN_LITESPEED1.png)
+![OPEN_LITESPEED1](Screenshots/OPEN_LITESPEED1.png)
 
 
 **Transitioning to Public Access**
@@ -3766,33 +3775,440 @@ After setting up OpenLiteSpeed and adjusting its administrative password, you mi
 	- Secure Your Site: Implement SSL/TLS to secure your site using HTTPS. For a live website, it's advisable to obtain a certificate from a recognized Certificate Authority (CA) like Let's Encrypt, rather than relying on a self-signed certificate which can trigger browser warnings.
 	-Domain Configuration: Assign a domain name to your site, directing users to your web content without needing to specify a port number.
 
-
-  Evaluating Virtualization and Operating System Details on Debian: Commands Overview
 ---
+
+### Signature.txt
+
+How to get the signature of your virtual machine:
+
+#### Open Terminal on Your Mac
+
+First, you need to open the Terminal application on your Mac. 
+
+
+#### Navigate to the VM's Directory
+
+Before calculating the SHA-1 hash, you need to navigate to the directory where your virtual machine's disk file is stored. 
+
+#### Execute the shasum Command
+
+With the terminal navigated to the directory containing your VM's disk file, execute the shasum command to generate the SHA-1 hash of the .vdi file:
+
+```bash
+shasum Born2BeRoot.vdi
+```
+
+This command will output a long string of characters, which is the SHA-1 hash of the .vdi file. This hash acts as the "signature" of your virtual machine, representing a unique identifier for the VM's current state. 
+
+
+The output will look something like this:
+
+
+```bash
+818fcac5f1200273cf7510128392748f32434735
+```
+
+**Why Use a SHA-1 Hash as a VM Signature?**
+
+Using the SHA-1 hash of a VM's disk file as its signature is effective for several reasons:
+
+- **Uniqueness**: The SHA-1 hash is highly unlikely to be duplicated between different files, making it a reliable identifier for the specific state of a VM's disk file.
+- **Integrity Verification**: The hash can be used to verify the integrity of the disk file over time. By re-calculating the hash at a later date, you can check if the file has been altered in any way.
+- **Documentation**: For projects requiring precise version control or documentation of VM states, this hash provides a concise method for tracking changes.
+
+After obtaining the VM's identifier using the method appropriate for your virtualization software:
+
+1. Clone the Repository:
+
+- Open Terminal and run git clone repository_url to clone the "42 repository."
+- Navigate into the cloned repository directory with cd 42_repository_directory.
+
+2. Create and Populate signature.txt:
+
+- Create a file named signature.txt and include the VM's identifier.
+- Use nano signature.txt and the identifier you obtained.
+
+3. Identifier verification:
+
+Execute the following command:
+
+```bash
+cat signature.txt
+```
+
+4. Add, Commit, and Push the Change:
+Finalize the process by adding the file to git, committing, and pushing it to the remote repository with:
+- git add signature.txt
+- git commit -m "Add VM identifier"
+- git push
+
+
+🚨 **CAUTION: DO NOT OPEN THE VIRTUAL MACHINE AGAIN!!!!** 🚨
 
 
 # Congratulations!! 🥳 WHAT AN IMPRESSIVE ACHIEVEMENT!!!!  🤘
 
 
+
 --- 
-## Part 4️⃣: Evaluating Virtualization and Operating System Details on Debian: Commands Overview
+## Part 4️⃣: Evaluation Criteria
+
+### General instructions
+
+- Ensure that the signature.txt file is present at the root of the cloned repository
+
+- Check that the signature contained in "signature.txt" is identical to that of the ".vdi" file of the virtual machine to be be evaluated. A simple diff should allow you to compare the two signatures. If necessary, ask the student being evaluated where their ".vdi" file is located.
+
+ 🚨  Remember to clone, duplicate or snapshot the virtual machine so **IT DOES NOT MODIFY THE IDENTIFIER**.🚨 
+
+
+### Mandatory part
+
+The student should explain the following points:
+
+#### How a virtual machine works
+
+Answer
+
+A virtual machine (VM) is a software emulation of a physical computer that runs an operating system and applications just like a physical computer does. VMs are commonly used for a variety of purposes, including software testing, server consolidation, and running applications or operating systems not supported by the host's native environment. Here’s a simplified explanation of how a virtual machine works:
+
+
+**1. Virtualization Layer**
+At the core of virtual machine technology is the virtualization layer, also known as a hypervisor. The hypervisor sits between the hardware and the virtual machines and is responsible for managing the VMs. There are two main types of hypervisors:
+
+- **Type 1 (Bare Metal)**: This hypervisor runs directly on the host's hardware to control the hardware and to manage guest operating systems. Examples include VMware ESXi, Microsoft Hyper-V, and Xen.
+- **Type 2 (Hosted)**: This hypervisor runs on a conventional operating system just like other computer programs. Examples include VMware Workstation, Oracle VirtualBox, and Parallels.
+
+**2. Hardware Emulation**
+The hypervisor emulates physical hardware components for each VM, such as a virtual CPU (vCPU), virtual memory, virtual disks, and network interfaces. This emulation allows the VM to operate as though it were a separate physical computer, even though it's sharing the underlying physical hardware with other VMs and possibly the host operating system.
+
+**3. Resource Allocation**
+The hypervisor allocates a portion of the physical resources (CPU, memory, storage, networking) to each VM. These resources are isolated from other VMs, ensuring that operations in one VM do not interfere directly with another. The hypervisor manages the scheduling of VM access to physical resources, ensuring that each VM gets its share of resources according to policies set by the administrator.
+
+**4. Operating System and Applications**
+On top of the virtual hardware, each VM runs its own operating system (guest OS), which is independent of the host OS. Within this guest OS, applications can be installed and run as if they were on a physical computer. The guest OS and applications are unaware they're running on virtualized hardware.
+
+**5. Isolation and Independence**
+VMs are isolated from one another, meaning that software within a VM can't directly access other VMs' resources or the host system's resources. This isolation is crucial for security and stability, as it prevents a problem in one VM from affecting others. It also allows for different operating systems and applications to run simultaneously on the same physical machine without interference.
+
+**6. Snapshot and Cloning**
+Virtualization technology allows for powerful management features like taking snapshots (saving the complete state of a VM at a point in time) and cloning (creating a copy of a VM). These features facilitate easy backup, recovery, and duplication of VMs for testing and deployment purposes.
+
+**7. Network Connectivity**
+VMs can be configured to access external networks, communicate with other VMs on the same host, or be isolated from the network entirely. The hypervisor provides virtual network interfaces and can simulate complex network topologies, which is particularly useful for testing network configurations and applications.
+
+
+In simple terms, a virtual machine (VM) is like a computer within a computer. It's a software version of a physical computer that can run its own operating system and applications, just like a real computer does. Here's how it works, step by step, in simpler words:
+
+- **The Basis**: You have a physical computer, which is your real, tangible machine. This is often called the "host."
+
+- **The Magic Trick**: On this physical computer, you use special software called a "hypervisor" to create one or more VMs. Think of the hypervisor as a magic trick that can make your computer pretend to be several computers at once.
+
+- **Pretend Hardware**: For each VM, the hypervisor creates fake (virtual) hardware. So, even though there's only one set of real hardware (your physical computer), each VM thinks it has its own CPU, memory, hard drive, etc.
+
+- **Running an OS**: On this virtual hardware, you can install an operating system (OS) and applications, just like on a real computer. Each VM runs its OS and apps independently of the others.
+
+- **Playing Nice**: The hypervisor makes sure that all the VMs play nice together. It manages how they share the real, physical resources of your computer (like the CPU and memory), so they don't interfere with each other.
+
+- **Safe and Separate**: Each VM is kept isolated from the others. This means if something goes wrong in one VM, like a crash or a virus, it doesn't affect the others.
+
+- **Why Do This?**: VMs are useful for testing out new software or settings in a safe environment, running applications that only work on certain operating systems, or keeping different tasks separate and organized.
+
+  
+#### Their choice of operating system
+
+**MY CHOICE : DEBIAN**
+
+Answer 
+
+Using Debian as your operating system offers several benefits in simple terms:
+
+- **Stability**: Debian is known for being very stable. This means it doesn't crash often and works reliably for a long time without issues, making it great for servers or when you need your system to run smoothly without interruptions.
+
+- **Security**: Debian takes security seriously. It has a dedicated team that tracks and fixes security issues promptly, helping to keep your system safe from vulnerabilities.
+
+- **Free**: Debian is completely free. You can download, use, and modify it without spending any money. This is great for both personal use and for organizations looking to reduce software costs.
+
+- **Open Source**: Being open-source means you can see how the software works, make changes to it, and share your modifications with others. This encourages learning and innovation.
+
+- **Large Software Repository**: Debian has access to a vast repository of software packages, making it easy to find and install the software you need for just about any task.
+
+- **Community Support**: Debian has a large and active community. This means you can find help and support from other users and developers through forums, mailing lists, and other online platforms.
+
+- **Versatility**: Debian can be used on a wide range of devices, from personal computers and servers to cloud infrastructure and embedded systems, making it a versatile choice for many different projects.
+
+
+It can be a good choice for beginners, especially those who are keen to learn more about how Linux works. However, its suitability for beginners depends on a few factors:
+
+**Pros for Beginners 👍 :**
+- **Stable and Reliable**: Debian's stability is a big plus. New users won't have to deal with frequent crashes or system instability.
+- **Free and Open Source**: Beginners can explore and learn without any cost. The open-source nature allows curious users to delve into the system's workings.
+- **Extensive Documentation**: Debian has thorough documentation, which can be incredibly helpful for beginners trying to understand the system.
+- **Large Software Repository**: Easy access to a vast array of software means beginners can experiment with different applications easily.
+- **Community Support**: A strong and active community can provide assistance, making it easier for beginners to find help when they need it.
+
+**Cons for Beginners 👎:**
+- **Learning Curve:** Compared to more user-friendly distributions like Ubuntu (which is based on Debian) or Linux Mint, Debian can have a steeper learning curve, especially for those not familiar with Linux.
+- **Software Freshness**: Debian values stability over having the latest software versions, which means its repositories might not always have the most recent releases. This might be a drawback for users who need the latest features.
+- **Configuration and Setup**: Beginners might find the configuration and setup process more challenging than in more beginner-focused distributions.
+
+
+#### The basic difference between CentOs and Debian
+
+Answer
+
+In simple terms, CentOS and Debian are both operating systems based on Linux, but they come from different families and have some key differences:
+
+- **Origin and Family:**
+    - **CentOS**: It's closely related to Red Hat Enterprise Linux (RHEL). CentOS is essentially a free version of RHEL, using its source code but without the official support and branding.
+    - **Debian**: It's an independent project that forms the basis for many other distributions, including Ubuntu. Debian is known for its strict open-source principles and volunteer-based development.
+
+- **Package Management:**
+    - **CentOS**: Uses the yum or the newer dnf command (in CentOS 8 and beyond) for managing packages, which are bundled as .rpm files.
+    - **Debian**: Uses the apt command for managing packages, which are bundled as .deb files. This system is also used by Ubuntu and other Debian-based distributions.
+
+- **Release Cycle**:
+   - **CentOS**: Traditionally followed RHEL's release cycle, which is slower, focusing on stability and long-term support. CentOS versions are supported for up to 10 years.
+   - **Debian**: Has a more flexible release cycle with Stable, Testing, and Unstable branches. The Stable branch is updated less frequently, emphasizing stability over the latest features, but more often than CentOS/RHEL.
+
+- **Default Software and Configuration:**
+   - **CentOS**: Often comes with software and configurations that are more enterprise-focused, aligning with its RHEL roots. It's commonly used on servers.
+   - **Debian**: Offers a vast array of packages and is known for its flexibility, making it suitable for desktops, servers, and everything in between.
+
+- **Community and Support:**
+   - **CentOS**: Had strong corporate support from Red Hat (now part of IBM), which also provides a lot of documentation and a professional network for help. However, with the shift to CentOS Stream, the community's focus is also shifting towards contributing directly to a rolling-release version that's a midstream between Fedora and RHEL.
+   - **Debian**: Is entirely community-driven, with a vast, global community of users and developers. Support comes from community forums, mailing lists, and documentation created by its users.
+
+#### The purpose of virtual machines
+
+Answer
+
+Virtual machines (VMs) serve several key purposes, making them incredibly useful for both personal and professional computing tasks. Here's why we use them, in simple terms:
+
+- **Running Multiple Operating Systems**: VMs allow you to run different operating systems on the same physical computer. For example, you can use Windows on your Mac or try out Linux on your Windows PC without needing separate devices.
+
+- **Testing and Development**: Developers use VMs to test apps or websites on different operating systems and configurations without needing multiple physical machines. It's like having a bunch of different test computers all packed into one.
+
+- **Security and Isolation**: VMs can isolate risky activities or software from the rest of your computer. If you're exploring a potentially dangerous website or testing suspicious software, doing it in a VM can prevent harm to your main system.
+
+- **Learning and Training**: VMs are great for learning how to set up and manage different operating systems or software environments. Since mistakes made in a VM won't affect your actual computer, they offer a safe space to learn.
+
+- **Server Consolidation**: In business environments, VMs let companies run multiple server environments on a single physical server. This saves money and space because they don't need a separate physical machine for each server task.
+
+#### If the evaluated student choose CentOS
+
+What SELinux and DNF are
+
+  
+#### If the evaluated student choose debian
+
+##### The difference betwen aptitude and apt
+
+Answer
+aptitude and apt are both package management tools used on Debian and Debian-based Linux distributions (like Ubuntu) to manage software packages, but they differ in several ways:
+
+**1. Interface:**
+- aptitude: Offers both a command-line interface and an interactive text-based graphical interface. The interactive interface is particularly useful for browsing packages, managing dependencies, and solving conflicts.
+- apt: Primarily a command-line tool designed for simplicity and ease of use. It does not have an interactive graphical interface like aptitude.
+
+**2. Dependency Resolution:**
+- **aptitude**: Known for its advanced dependency resolution engine. It can suggest multiple ways to resolve package dependencies or conflicts and automatically handles removal of unused packages.
+- apt: Handles dependency resolution as well, but in a more straightforward manner. Until recently, it didn't automatically remove unused packages (though now apt autoremove can be used for this purpose).
+
+**3. Usage:**
+- **aptitude**: Because of its detailed dependency management and interactive interface, aptitude is often preferred by more experienced users or those who need fine control over package management and resolution of complex conflicts.
+- **apt**: Designed to be user-friendly and easy to use, making it the preferred choice for many users for everyday package management tasks.
+
+**4. History and Development:**
+- **aptitude**: Developed after apt as an alternative that combines the functionalities of several other package management tools like apt-get and apt-cache, with the addition of an interactive interface.
+- **apt**: One of the original package management tools for Debian, serving as the foundation for other tools like aptitude. apt is a more recent addition, meant to simplify and streamline common package management commands.
+
+**5. Functionality:**
+- Both tools allow you to install, remove, update, and manage software packages, but aptitude may provide more detailed information and options for managing packages and their dependencies.
+
+
+Summary:
+While both aptitude and apt serve the **same basic purpose of managing software packages in Debian-based systems**, they cater to slightly different user needs. **apt** is streamlined and simple, making it suitable for most users and everyday tasks. **aptitude** offers more detailed control and an interactive interface, making it appealing to users who need or want deeper management capabilities.
+
+
+##### What APPArmor is
+
+Answer 
+AppArmor (Application Armor) is a Linux kernel security module that **helps administrators secure their system by restricting programs' capabilities with per-program profiles**. Unlike traditional access control models which focus on who (i.e., which user) can access what resources (files, directories, ports, etc.), AppArmor defines what applications can do and what resources they can access.
+
+Here's a simplified overview of how AppArmor works:
+
+- **Profiles**: AppArmor uses profiles for each program to determine what files it can read, write, and execute. Profiles can be created in 'enforce' mode, where the rules are actively applied, or 'complain' mode, where violations are logged but not blocked, useful for testing and setup.
+
+- **Default Behavior**: Without a profile, applications have default access to resources, but once a profile is applied, the application is restricted to the permissions defined within it. This limits potential damage from compromised applications or vulnerabilities.
+
+- **Path-based Identification**: AppArmor identifies files and resources by their paths, making it relatively straightforward to write and manage profiles.
+
+- **Security**: By confining applications to a limited set of resources, AppArmor reduces the risk of software exploits spreading or accessing sensitive information. This is particularly useful for services exposed to the internet, like web servers.
+
+- **Flexibility**: AppArmor allows for a granular level of control over application permissions, enabling a balance between security and functionality. Administrators can adjust profiles to meet the specific needs of their system and applications.
+
+- **Integration**: AppArmor is integrated into many Linux distributions, such as Ubuntu, where it's enabled by default for certain applications, offering an additional layer of security with minimal configuration required for basic use.
+
+In summary, AppArmor enhances the security of Linux systems by providing a mechanism to restrict applications' access to the filesystem and other resources, thereby limiting the potential impact of vulnerabilities within those applications.
+
+
+🚨 During the defense, a script must diplay information all every 5 minutes. Its operation will be checked in detailed later. If the explanations are not clear, the evaluation stops here.🚨
+
+---
+
+#### UFW CHECK
+
+
+Check that UFW is installed
+
+```bash
+sudo apt install ufw
+
+```
+Check that UFW program runs properly
+
+
+Explain what UFW is and the value using it
+
+
+List the active rules of UFW. A rule must exist for 4242
+
+```bash
+sudo ufw status
+```
+
+Add a new rule to open port 8080 and then delete this new rule
+
+```bash
+sudo ufw allow 8080
+
+sudo ufw delete 8080
+```
 
 
 
+#### SSH CHECK
+
+Check that SSH is installed
+
+
+Check that SSH program runs properly
+
+
+Explain what SSH is and the value using it
+
+
+```bash
+cat signature.txt
+```
+
+Verify that the SSH service only uses port 4242
+
+Make sure you cannot SSH with the root user as stated in the subject:
+
+```bash
+ssh root@localhost -p 4242
+```
+
+#### OPERATING SYSTEM CHECK 
+
+```bash
+hostnamectl
+```
+
+
+#### USER AND USERGROUP CHECK
+
+Check that the user has been added and it belongs to "sudo" and "user42" groups
+
+```bash
+group getent sudo
+```
+
+```bash
+groups anwuyan-
+
+```
+
+Check the password policy:
+- Create a new user
+- Create a group name called "evaluating" group
+- Explain the advantages of this pasword policy, as well, advantages and disadvantages of its implementation.  
+
+
+#### PARTITIONS CHECK
+
+```bash
+lsblk
+```
+
+#### HOSTNAME AND PARTITIONS
+
+check that the hostname of the machine is correctly formatted as follows:
+- yourlogin42
+
+```bash
+hostnamectl
+```
+
+Modify the hostname by replacing the login with the evaluator
+
+Restore the machine to the original hostname
+
+How to view the partitions for this virtual machine
+
+```bash
+lsblk
+```
+
+Explain what LVM works and what it is all about
+
+
+#### SUDO
+
+Check that sudo program is properly installed on the virtual machine
+
+The student should show assinging your new user to the sudo group
+
+Explain the value and operation of sudo
+
+The student must show the implementation of the rules
+
+Verify that /var/log/sudo folder exists and check the contents.
+
+
+Run sudo and see if the file /var/log/sudo folder has been updated
+
+#### SCRIPT MONITORING 
+
+What crontab is?
+
+How the script works by showing the code
+
+We need to set up the script every 10 minutes from when the servers starts
 
 
 
+### Bonus Part
 
+#### Setting up partitions
 
+```bash
+lsblk
+```
 
+#### Setting up WordPress
 
+```bash
+localhost 80
+```
+#### Free Choice server
 
-
-
-
-
-
-
+```bash
+localhost 7080
+localhost 8088
+```
 
 
 
