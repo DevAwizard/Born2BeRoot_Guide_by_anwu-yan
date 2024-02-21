@@ -1,6 +1,6 @@
   # Documentation: Creating a VirtualBox VM with bonus ​👩🏻‍💻​​
 
-  # The best tutorial of BORN TO BE ROOT 42 GLOBAL 2024
+  # 💥 The best tutorial of BORN TO BE ROOT 42 global 2024 🔥
 
 ## ⭐​ Table of content ⭐​
 
