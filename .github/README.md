@@ -214,9 +214,7 @@
     - [Their Choice of Operating System](#their-choice-of-operating-system)
     - [The Basic Difference Between CentOS and Debian](#the-basic-difference-between-centos-and-debian)
     - [The Purpose of Virtual Machines](#the-purpose-of-virtual-machines)
-    - If the Evaluated Student Choose CentOS
         - [CentOS](#if-the-evaluated-student-choose-centos)
-    - If the Evaluated Student Choose Debian
         - [Debian](#if-the-evaluated-student-choose-debian)
             - [The Difference Between Aptitude and Apt](#the-difference-between-aptitude-and-apt)
             - [What AppArmor Is](#what-apparmor-is)
