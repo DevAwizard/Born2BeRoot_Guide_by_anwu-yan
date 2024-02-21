@@ -228,9 +228,9 @@
         - [SUDO](#sudo)
         - [Script Monitoring](#script-monitoring)
 7. [Bonus Part](#bonus-part)
-       	- [Setting Up Partitions](#setting-up-partitions)
-        - [Setting Up WordPress](#setting-up-wordpress)
-        - [Free Choice Server](#free-choice-server)
+   	- [Setting Up Partitions](#setting-up-partitions)
+   	- [Setting Up WordPress](#setting-up-wordpress)
+   	- [Free Choice Server](#free-choice-server)
 
 
 
