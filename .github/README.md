@@ -209,7 +209,8 @@
  [Part 4️⃣: Evaluation Criteria](#Part-4️⃣-Evaluation-Criteria)
 
  5. [General Instructions](#general-instructions)
- 6. [Mandatory Part](#mandatory-part)
+    
+ 7. [Mandatory Part](#mandatory-part)
         -  [How a Virtual Machine Works](#how-a-virtual-machine-works)
         -  [Their Choice of Operating System](#their-choice-of-operating-system)
         -  [The Basic Difference Between CentOS and Debian](#the-basic-difference-between-centos-and-debian)
@@ -226,7 +227,8 @@
         - [Hostname and Partitions](#hostname-and-partitions)
         - [SUDO](#sudo)
         - [Script Monitoring](#script-monitoring)
-7. [Bonus Part](#bonus-part)
+
+8. [Bonus Part](#bonus-part)
    	- [Setting Up Partitions](#setting-up-partitions)
    	- [Setting Up WordPress](#setting-up-wordpress)
    	- [Free Choice Server](#free-choice-server)
