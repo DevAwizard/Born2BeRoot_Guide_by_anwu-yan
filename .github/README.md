@@ -4126,6 +4126,21 @@ sudo ufw allow 8080
 sudo ufw delete 8080
 ```
 
+🆕 **`SYSTEMCTL`**
+
+`systemctl` is a command-line utility in Linux systems that is part of the systemd system and service manager. It provides a central management interface for controlling the systemd system and service manager, which is responsible for initializing, managing, and tracking system services and other system resources.
+
+Here's a breakdown of what systemctl does:
+
+- **Start, stop, and manage services**: You can use systemctl to start, stop, restart, reload, enable, and disable services. This includes services that run at system startup as well as user-level services.
+
+- **Check the status of services and units**: It allows you to check the status of systemd units, including services, to see if they are active, loaded, or in any error state.
+
+- **Manage system state**: systemctl can be used to initiate system states like reboot, shutdown, suspend, and hibernate.
+
+- **List units and services**: You can list active, loaded, or any units with specific states, providing a comprehensive overview of what's running on the system or available to-  start.
+
+- **Isolate runlevels/targets**: It supports changing the runlevel of the system by switching between different targets, which are essentially groups of services and units that create a specific operating state for the system.
 
 
 #### SSH CHECK
@@ -4586,21 +4601,6 @@ localhost 8088
 ```
 
 
-🆕 Concept `SYSTEMCTL`
-
-`systemctl` is a command-line utility in Linux systems that is part of the systemd system and service manager. It provides a central management interface for controlling the systemd system and service manager, which is responsible for initializing, managing, and tracking system services and other system resources.
-
-Here's a breakdown of what systemctl does:
-
-- **Start, stop, and manage services**: You can use systemctl to start, stop, restart, reload, enable, and disable services. This includes services that run at system startup as well as user-level services.
-
-- **Check the status of services and units**: It allows you to check the status of systemd units, including services, to see if they are active, loaded, or in any error state.
-
-- **Manage system state**: systemctl can be used to initiate system states like reboot, shutdown, suspend, and hibernate.
-
-- **List units and services**: You can list active, loaded, or any units with specific states, providing a comprehensive overview of what's running on the system or available to-  start.
-
-- **Isolate runlevels/targets**: It supports changing the runlevel of the system by switching between different targets, which are essentially groups of services and units that create a specific operating state for the system.
 
 
 ---
