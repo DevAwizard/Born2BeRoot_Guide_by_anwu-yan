@@ -211,7 +211,7 @@
  5. [General Instructions](#general-instructions)
     
  7. [Mandatory Part](#mandatory-part)
-        -  [How a Virtual Machine Works](#how-a-virtual-machine-works)
+         -  [How a Virtual Machine Works](#how-a-virtual-machine-works)
         -  [Their Choice of Operating System](#their-choice-of-operating-system)
         -  [The Basic Difference Between CentOS and Debian](#the-basic-difference-between-centos-and-debian)
         -  [The Purpose of Virtual Machines](#the-purpose-of-virtual-machines)
