@@ -4130,7 +4130,7 @@ sudo ufw delete 8080
 ssh -V
 ```
 
--** Check SSH Server (sshd)**:
+- **heck SSH Server (sshd)**:
 
 ```bash
 sshd -v
