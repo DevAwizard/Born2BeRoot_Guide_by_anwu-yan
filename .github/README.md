@@ -3528,7 +3528,7 @@ mysql -u anwuyan- -p wp_database
 
 - Check If the User Already Exists: Log into MySQL/MariaDB and list all users to check for the existence of anwuyan-. If necessary, drop and recreate the user with correct permissions and password.
 
-After completing these steps, double-check your wp-config.php settings, ensure the database server is running, and test your WordPress site again by navigating to http://localhost. If the issue persists, review both MySQL/MariaDB and your web server's error logs for further troubleshooting.
+After completing these steps, double-check your wp-config.php settings, ensure the database server is running, and test your WordPress site again by navigating to 'http://localhost'. If the issue persists, review both MySQL/MariaDB and your web server's error logs for further troubleshooting.
 
 
 ERROR 2
@@ -3549,12 +3549,14 @@ How to Fix:
 - Check Privileges: Make sure you're logged in as a root user or a user with the CREATE USER privilege. If not, log in with a user that has these privileges or ask your database administrator for assistance.
 
 ##### Locale Setting Warnings
+
+```bash
 LANGUAGE = "en_GB:en",
 	LC_ALL = (unset),
 	LC_TERMINAL = "iTerm2",
 	LC_CTYPE = "UTF-8",
 	LANG = "en_GB.UTF-8"
-
+```
 
 Error Explanation:
 The warnings about locale settings when you execute the sudo lighty-enable-mod fastcgi and sudo lighty-enable-mod fastcgi-php commands are due to the system's inability to properly handle or recognize the specified locale settings. This can happen if:
@@ -3667,11 +3669,15 @@ Upgrades all the installed packages to their latest versions based on the update
 
 #### 154. Add OpenLiteSpeed Repository
 
-By default, OpenLiteSpeed is available in the Debian 11 base repository. To add the OpenLiteSpeed repository to your Debian system, execute the following command: wget -O - https://repo.litespeed.sh | sudo bash. This command downloads and executes a script that adds the OpenLiteSpeed repository to your system's software sources, allowing you to install OpenLiteSpeed using apt.
+By default, OpenLiteSpeed is available in the Debian 11 base repository. To add the OpenLiteSpeed repository to your Debian system, execute the following command: 
+
 
 ```bash
 wget -O - https://repo.litespeed.sh | sudo bash
 ```
+
+This command downloads and executes a script that adds the OpenLiteSpeed repository to your system's software sources, allowing you to install OpenLiteSpeed using apt.
+
 
 Downloads and executes the script from the OpenLiteSpeed repository to add it to your system.
 
@@ -3726,9 +3732,11 @@ Installs OpenLiteSpeed from the newly added repository.
 
 The default password for OpenLiteSpeed is 123456. For security reasons, it's advised to change this password to something more secure. The document mentions a command following this explanation to change the password, but the specific command is not provided in your text. Typically, this involves accessing the OpenLiteSpeed admin panel or using a command-line utility provided by OpenLiteSpeed to update the admin password.
 
-The following command 
-sudo /usr/local/lsws/admin/misc/admpass.sh
+The following command: 
 
+```bash
+sudo /usr/local/lsws/admin/misc/admpass.sh
+```
 
 
 "Change the password to something more secure": Indicates the need to replace the default password but does not specify the command.
