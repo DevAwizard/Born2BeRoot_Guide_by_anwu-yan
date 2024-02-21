@@ -4118,20 +4118,114 @@ sudo ufw delete 8080
 
 #### SSH CHECK
 
-Check that SSH is installed
+- Check that SSH is installed
 
+- **Check SSH Client**:
+
+```bash
+ssh -V
+```
+
+-** Check SSH Server (sshd)**:
+
+```bash
+sshd -v
+```
+
+Or
+
+```bash
+systemctl status ssh
+```
+
+If SSH is not installed, you can install it using your system's package manager. For example, on Ubuntu/Debian:
+
+```bash
+sudo apt-get update
+sudo apt-get install openssh-server
+```
 
 Check that SSH program runs properly
 
 
-Explain what SSH is and the value using it
-
+**Check SSH Service Status**:
 
 ```bash
-cat signature.txt
+sudo systemctl status ssh
 ```
 
+If the service is not running, you can start it with:
+
+```bash
+sudo systemctl start ssh
+```
+
+To enable SSH to start automatically on system boot:
+
+```bash
+sudo systemctl enable ssh
+```
+
+Explain what SSH is and the value using it
+
+SSH, or Secure Shell, is a cryptographic network protocol for operating network services securely over an unsecured network. Typical applications include remote command-line login, remote command execution, and secure data communication between two computers connected over an open network such as the internet.
+
+The value of using SSH includes:
+
+- **Encryption**: SSH encrypts all data exchanged, including passwords, to defend against eavesdropping, connection hijacking, and other attacks.
+- **Authentication**: SSH supports various authentication mechanisms, including passwords and digital certificates, ensuring that only authorized users can access the system.
+- **Integrity**: SSH ensures that the data sent and received remains unchanged during transit, protecting against interception and modification.
+- **Port Forwarding/Tunneling**: SSH can secure other network protocols like FTP and SMTP by tunneling them through an encrypted SSH connection.
+- **SFTP and SCP**: SSH provides secure alternatives to FTP for file transfers, namely SCP (Secure Copy) and SFTP (SSH File Transfer Protocol).
+
+By securing your network communications with SSH, you significantly enhance your system's security and data integrity over insecure networks.
+
+
 Verify that the SSH service only uses port 4242
+
+Check SSH Configuration for Port Setting:
+
+```bash
+grep -i port /etc/ssh/sshd_config
+```
+
+This command searches for the port configuration in the SSH daemon configuration file. By default, SSH uses port 22. If you want to change it to port 4242, you would need to edit /etc/ssh/sshd_config.
+
+Change SSH Port (Optional):
+If you need to change the port to 4242:
+
+Edit the SSH configuration file:
+
+```bash
+sudo nano /etc/ssh/sshd_config
+```
+
+Find the line that says #Port 22, uncomment it (remove the #), and change 22 to 4242:
+
+```bash
+Port 4242
+```
+
+Save the file and exit the editor.
+
+Restart SSH Service:
+After making changes to the configuration file, you'll need to restart the SSH service for the changes to take effect:
+
+```bash
+sudo systemctl restart ssh
+```
+
+Verify the Change:
+You can verify that SSH is now set to use port 4242 by checking the listening ports:
+
+```bash
+sudo netstat -tuln | grep 4242
+```
+
+or using:
+```bash
+sudo ss -tuln | grep 4242
+```
 
 Make sure you cannot SSH with the root user as stated in the subject:
 
@@ -4144,7 +4238,6 @@ ssh root@localhost -p 4242
 ```bash
 hostnamectl
 ```
-
 
 #### USER AND USERGROUP CHECK
 
@@ -4209,7 +4302,6 @@ Then, replace the content with your new hostname, save the file, and exit the ed
 ```bash
 sudo nano /etc/hosts
 ```
-
 
 Restore the machine to the original hostname
 
@@ -4314,28 +4406,152 @@ Explain what LVM works and what it is all about
 
 #### SUDO
 
-Check that sudo program is properly installed on the virtual machine
+- **Check if sudo is Installed**
+Check sudo Installation:
 
-The student should show assinging your new user to the sudo group
+```bash
+sudo --version
+```
 
-Explain the value and operation of sudo
+This command will display the version of sudo installed, indicating it's installed. If sudo is not installed, you'll get an error message.
 
-The student must show the implementation of the rules
+- **Assign a New User to the sudo Group**
+In most Linux distributions, users who are part of the sudo or wheel group are allowed to use the sudo command.
+Create a New User (if needed):
 
-Verify that /var/log/sudo folder exists and check the contents.
+```bash
+sudo adduser newusername
+```
 
+Replace newusername with the desired username.
+
+Add User to the sudo Group:
+On Debian/Ubuntu systems:
+
+```bash
+sudo usermod -aG sudo newusername
+```
+
+On CentOS/RHEL systems (the group is called wheel):
+
+```bash
+sudo usermod -aG wheel newusername
+```
+
+
+- **Explain the Value and Operation of sudo**
+sudo, short for SuperUser DO, is a powerful command used in Unix-like operating systems that allows permitted users to execute a command as the superuser or another user, as specified by the security policy, typically found in /etc/sudoers.
+
+Value:
+- Security: sudo provides a secure way to delegate administrative privileges without sharing the root password.
+- Auditability: Each sudo command execution is logged, allowing system administrators to monitor sudo usage and investigate incidents.
+- Flexibility: Administrators can configure sudo to grant specific permissions to specific users on specific commands, reducing the risk of errors or malicious activities.
+
+Operation:
+- When a user executes a command using sudo, they're prompted to enter their own password.
+sudo checks the /etc/sudoers file (or linked configuration files in /etc/sudoers.d/) to see if the user has permission to run the command.
+- If permitted, sudo executes the command with root or the specified user's privileges.
+
+**Implement the Rules**
+
+You define rules in the /etc/sudoers file. It's recommended to use visudo for editing to prevent syntax errors.
+
+Edit /etc/sudoers:
+
+```bash
+sudo visudo
+```
+Add Rules: For example, to allow newusername to run all commands without a password:
+
+```bash
+newusername ALL=(ALL) NOPASSWD: ALL
+```
+
+- **Verify /var/log/sudo Folder Exists and Check Contents**
+
+**Check if /var/log/sudo Exists**:
+
+```bash
+ls -l /var/log/sudo
+```
+
+If the directory doesn't exist or you're interested in sudo activities, logs are typically found in /var/log/auth.log or /var/log/secure depending on the distribution.
+
+**Check the Contents**:
+
+For systems that log sudo activities in /var/log/sudo:
+
+```bash
+sudo ls /var/log/sudo
+```
+
+For Debian/Ubuntu (/var/log/auth.log):
+
+```bash
+sudo grep sudo /var/log/auth.log
+```
+
+For CentOS/RHEL (/var/log/secure):
+
+```bash
+sudo grep sudo /var/log/secure
+```
 
 Run sudo and see if the file /var/log/sudo folder has been updated
 
 #### SCRIPT MONITORING 
 
-What crontab is?
+**What is Crontab?**
+- Crontab, short for "cron table," is a configuration file used in Unix-based systems (like Linux) that specifies shell commands to run periodically on a set schedule. The cron daemon is the background service that enables scheduled execution based on the configurations in the crontab. Each user on a system can have their own crontab, and there's also a system-wide crontab.
+
+Crontab entries consist of a time and date field, followed by a command to be executed. The syntax for crontab entries is as follows:
 
 
-How the script works by showing the code
+```bash
+* * * * * command_to_execute
+- - - - -
+| | | | |
+| | | | +----- Day of the week (0 - 7) (Sunday=0 or 7)
+| | | +------- Month (1 - 12)
+| | +--------- Day of the month (1 - 31)
+| +----------- Hour (0 - 23)
++------------- Minute (0 - 59)
+```
 
-We need to set up the script every 10 minutes from when the servers starts
+Make sure to make this script executable by running chmod +x /path/to/monitor.sh.
 
+
+**Schedule with Crontab**
+- To schedule this script to run every 10 minutes from when the server starts, you actually schedule it to run every 10 minutes continuously, as the cron service doesn't directly support "from when the server starts" scheduling. Instead, cron jobs are scheduled based on time.
+
+Edit the Crontab for Your User:
+Open your crontab for editing by running:
+
+```bash
+crontab -e
+```
+
+Add a New Entry:
+Add the following line to run your script every 10 minutes:
+
+```bash
+*/10 * * * * /path/to/monitor.sh
+```
+
+This tells the cron daemon to run monitor.sh every 10 minutes of every hour, every day.
+
+Save and Exit:
+After adding the line, save the file and exit the editor. The cron service will automatically pick up this new job and start executing it at the specified interval.
+
+
+**Verify the Crontab Entry**
+To verify that your crontab entry is set up correctly, you can list your current user's crontab entries with:
+
+```bash
+crontab -l
+```
+
+This command will display all crontab entries for the current user, where you should see your newly added line for monitor.sh.
 
 
 ### Bonus Part
