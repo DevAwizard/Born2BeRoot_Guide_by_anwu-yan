@@ -4182,7 +4182,109 @@ hostnamectl
 
 Modify the hostname by replacing the login with the evaluator
 
+For Most Linux Distributions (Including Ubuntu and Debian)
+- **Open the Terminal**: You can usually open it by searching for "Terminal" in your applications menu or by using a keyboard shortcut, often Ctrl+Alt+T.
+
+- **Change the Hostname Temporarily**: To change the hostname until the next reboot, you can use the hostname command followed by the new desired hostname. This change will not persist after a reboot.
+
+
+```bash
+hostname new_hostname
+```
+
+Replace new_hostname with your desired hostname.
+
+- **Change the Hostname Permanently**:
+
+Edit /etc/hostname File: This file contains the permanent hostname of your system. You can edit it with a text editor like nano or vim. For example, using nano:
+
+```bash
+sudo nano /etc/hostname
+```
+
+Then, replace the content with your new hostname, save the file, and exit the editor.
+
+- **Edit /etc/hosts File**: It's also a good idea to update the /etc/hosts file where the hostname might be referenced. Open it with a text editor:
+
+```bash
+sudo nano /etc/hosts
+```
+
+
 Restore the machine to the original hostname
+
+
+##### If You Remember the Original Hostname
+- **Change the Hostname Temporarily**:
+
+If you only need to revert the change temporarily until the next reboot, you can use the hostname command:
+```bash
+hostname original_hostname
+```
+
+Replace original_hostname with your machine's original hostname.
+
+- **Change the Hostname Permanently**:
+
+To permanently revert to the original hostname, you will need to edit the /etc/hostname and possibly the /etc/hosts files to replace the current hostname with the original one.
+
+##### Steps to Edit /etc/hostname and /etc/hosts:
+
+- **Edit /etc/hostname**:
+
+Open the file in a text editor with root permissions:
+
+```bash
+sudo nano /etc/hostname
+```
+
+Replace the current hostname with the original hostname, save the changes, and exit the editor.
+
+- **Edit /etc/hosts**:
+
+Similarly, edit the /etc/hosts file to ensure any reference to the current hostname is changed back to the original hostname:
+
+```bash
+sudo nano /etc/hosts
+```
+
+Find the line with the current hostname and replace it with the original hostname. Save the changes and exit the editor.
+
+- **Apply the Changes**:
+
+Use the hostnamectl command to apply the change immediately without needing to reboot:
+
+```bash
+sudo hostnamectl set-hostname original_hostname
+```
+
+
+Replace original_hostname with the original hostname of your machine.
+
+- **Verify the Change**:
+
+To ensure the hostname was successfully changed back, you can use:
+
+
+```bash
+hostnamectl
+```
+
+or
+
+```bash
+hostname
+```
+
+##### If You Don't Remember the Original Hostname
+If you don't remember the original hostname and didn't back it up, finding it can be tricky. Here are a few suggestions:
+
+- **Check Cloud or Virtualization Platform Settings**: If your VM is hosted on a cloud platform or managed through a virtualization platform, the original hostname might be listed in the management console or configuration settings.
+- **Check Network Configuration Files or Tools**: Some systems register the hostname with DHCP or DNS servers. You might find the original hostname in the DHCP configuration or by querying the DNS if the hostname was associated with a static IP.
+- **Look for System or Application Logs**: Some system or application logs might include the hostname. Searching through these logs for references to the hostname could help you identify the original value.
+- **Backup Files**: If you have backups of the system files, you may find the original hostname in the backup of the /etc/hostname or /etc/hosts files.
+
+
 
 How to view the partitions for this virtual machine
 
@@ -4192,6 +4294,23 @@ lsblk
 
 Explain what LVM works and what it is all about
 
+**What It Is ?**
+- LVM is a tool for managing disk space flexibly, allowing you to change partition sizes and combine disks easily.
+
+**Key Benefits**
+- Flexibility:
+	- Adjust Size: Change partition sizes without stopping your system.
+	- Combine Disks: Merge several small disks into one large virtual disk for easier file management
+- Easy Management:
+	- Snapshots: Take a snapshot of your disk to restore it to a previous state if needed.
+	- Move Data: Easily move data between disks without downtime.
+
+- **How It Works:**
+	- Physical Volumes (PV): Your actual hard drives/SSDs.
+	- Volume Groups (VG): A collection of PVs combined into a large virtual disk.
+
+- **Why Use LVM?**
+	- Ideal for those who need to adjust their storage space over time, like for servers or data-heavy users. Offers great control over disk space but requires some setup and management knowledge.
 
 #### SUDO
 
@@ -4211,6 +4330,7 @@ Run sudo and see if the file /var/log/sudo folder has been updated
 #### SCRIPT MONITORING 
 
 What crontab is?
+
 
 How the script works by showing the code
 
