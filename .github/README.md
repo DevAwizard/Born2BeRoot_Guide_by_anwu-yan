@@ -4,6 +4,10 @@
 
   # Done by anwu-yan 42 URDULIZ
 
+<img src="https://img.shields.io/badge/42-%23000000.svg?&style=for-the-badge&logo=42&logoColor=white" />
+
+  [![SPANISH VERSION](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://katherineoelsner.com/)
+
 ## ⭐​ Table of content ⭐​
 
 1. [Introduction](#introduction)
