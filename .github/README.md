@@ -2192,7 +2192,7 @@ To verify network connectivity for the virtual machine, you can perform the foll
 ❌​ REMEMBER do not use the same username for two different virtual machines. 
 
 
-If not the following error message will appear:
+If not, the following error message will appear:
 
 
 ```bash
@@ -2393,7 +2393,7 @@ Let's break down this command to understand its components and functionality:
 
 - **`free --mega`**:
    - The free command is used to display the total amounts of free and used memory on the system, along with the buffers and cache used by the kernel.
-The --mega option specifies that the output should be presented in megabytes, making it straightforward to interpret.
+The `--mega` option specifies that the output should be presented in megabytes, making it straightforward to interpret.
 
 - **`|`** (pipe):
 
@@ -2529,9 +2529,9 @@ Let's break down this command to understand its components and functionality:
 
 ![CPU_USAGE](../Screenshots/CPU_USAGE.png)
 
-tail -1: This option tells tail to output the last line of the input it receives. The -1 specifies the number of lines from the end of the file (or input stream) to display, which in this case is just the very last line. This is the correct usage for wanting to process only the latest output from vmstat, for example.
+- `tail -1`: This option tells tail to output the last line of the input it receives. The -1 specifies the number of lines from the end of the file (or input stream) to display, which in this case is just the very last line. This is the correct usage for wanting to process only the latest output from vmstat, for example.
 
-tail -l: This usage is incorrect based on the conventional options available for the tail command. The tail command does not recognize -l as a valid option for specifying the number of lines to display. Typically, tail expects a number after the hyphen to indicate how many lines from the end of the file to output, such as -1, -5, -10, etc. If you intended to use -l as an option, it might be a typo or a misunderstanding of the command's options.
+- `tail -l`: This usage is incorrect based on the conventional options available for the tail command. The tail command does not recognize -l as a valid option for specifying the number of lines to display. Typically, tail expects a number after the hyphen to indicate how many lines from the end of the file to output, such as -1, -5, -10, etc. If you intended to use -l as an option, it might be a typo or a misunderstanding of the command's options.
 
 
 
@@ -2693,7 +2693,7 @@ Here’s how the process works:
 
  - **`grep "link/ether"`**:  The output of ip link is then piped to grep, which filters the output to only include lines containing "link/ether". This part specifically targets the lines that display the MAC addresses of the interfaces, as "link/ether" is the indicator of an Ethernet link layer and its associated MAC address.
 
- -**`awk '{print $2}'`**:Finally, awk is used to extract and print only the second field of the filtered lines, which corresponds to the MAC address itself. awk is a powerful text processing tool, and in this context, it's used to neatly isolate the MAC address from the rest of the information.
+ - **`awk '{print $2}'`**:Finally, awk is used to extract and print only the second field of the filtered lines, which corresponds to the MAC address itself. awk is a powerful text processing tool, and in this context, it's used to neatly isolate the MAC address from the rest of the information.
 
 ![MAC_ADDRESS](../Screenshots/MAC_ADDRESS.png)
 
@@ -2847,29 +2847,29 @@ More detailed explanation (If you wish, skip this part, up to you !)
 
 **4. RAM Usage**
 - Commands:
-    - Total: ram_total=$(free --mega | awk '$1 == "Mem:" {printf $2}')
-    - Used: ram_use=$(free --mega | awk '$1 == "Mem:" {printf $3}')
-    - Percentage: ram_percent=$(free --mega | awk '$1 == "Mem:" {printf("%.2f%%"), $3/$2*100}')
-- Explanation: Uses free to fetch memory usage in megabytes, parsing total, used, and calculating the percentage of used memory.
-- Significance: Shows how much memory is being utilized, critical for performance monitoring.
+    - **Total**: ram_total=$(free --mega | awk '$1 == "Mem:" {printf $2}')
+    - **Used**: ram_use=$(free --mega | awk '$1 == "Mem:" {printf $3}')
+    - **Percentage**: ram_percent=$(free --mega | awk '$1 == "Mem:" {printf("%.2f%%"), $3/$2*100}')
+- **Explanation**: Uses free to fetch memory usage in megabytes, parsing total, used, and calculating the percentage of used memory.
+- **Significance**: Shows how much memory is being utilized, critical for performance monitoring.
 
 **5. Disk Usage**
 Commands:
-- Total: disk_total=$(df -m | awk '{disk_t += $2} END {printf ("%.1fGb\n"), disk_t/1024}')
-- Used: disk_use=$(df -m | awk '{disk_u += $3} END {printf ("%.1fGb\n"), disk_u/1024}')
-- Percentage: disk_percent=$(df -m | awk '{disk_u += $3} {disk_t+= $2} END {printf("%.1f"), disk_u/disk_t*100}')
-- Explanation: Summarizes disk usage by calculating total and used space in gigabytes, along with the usage percentage.
-- Significance: Essential for managing storage resources and planning for capacity.
+- **Total**: disk_total=$(df -m | awk '{disk_t += $2} END {printf ("%.1fGb\n"), disk_t/1024}')
+- **Used**: disk_use=$(df -m | awk '{disk_u += $3} END {printf ("%.1fGb\n"), disk_u/1024}')
+- **Percentage**: disk_percent=$(df -m | awk '{disk_u += $3} {disk_t+= $2} END {printf("%.1f"), disk_u/disk_t*100}')
+- **Explanation**: Summarizes disk usage by calculating total and used space in gigabytes, along with the usage percentage.
+- **Significance**: Essential for managing storage resources and planning for capacity.
 
 **6. CPU Load (cpu_fin)**
 - Command: cpu_fin=$(vmstat 1 2 | tail -1 | awk '{printf "%.1f", 100 - $15}')
-- Explanation: Uses vmstat to get system statistics, then calculates CPU load by subtracting the idle time from 100%.
-- Significance: Indicates the current workload on the CPU, with higher values suggesting more activity.
+- **Explanation**: Uses vmstat to get system statistics, then calculates CPU load by subtracting the idle time from 100%.
+- **Significance**: Indicates the current workload on the CPU, with higher values suggesting more activity.
 
 **7. Last Boot (lb)**
 - Command: lb=$(who -b | awk '$1 == "system" {print $3 " " $4}')
-- Explanation: Extracts the last system boot time from the who command output.
-- Significance: Useful for tracking system uptime and maintenance windows.
+- **Explanation**: Extracts the last system boot time from the who command output.
+- **Significance**: Useful for tracking system uptime and maintenance windows.
 
 **8. LVM Use (lvmu)**
 - Command: lvmu=$(lsblk | grep "lvm" | wc -l > 0 && echo yes || echo no)
@@ -2915,7 +2915,7 @@ Commands:
 - Explanation: These are variables used within an awk script to accumulate total and used disk space, respectively. disk_u for used disk space, and disk_t for total disk space.
 - Significance: They enable calculating the overall disk usage percentage by keeping a running total of disk space metrics.
 
-**`--mega**
+**`--mega`**
 - Explanation: This is an option used with the free command to display memory information in megabytes. It standardizes the output for easier reading and processing.
 - Significance: Facilitates consistent memory usage reports across various systems, aiding in monitoring and comparison tasks.
 
