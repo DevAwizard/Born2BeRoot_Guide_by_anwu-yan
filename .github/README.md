@@ -213,8 +213,9 @@
   		- [157. Configure the Firewall](#157-configure-the-firewall)
   		- [158. Accessing the OpenLiteSpeed Admin Panel](#158-accessing-the-openlitespeed-admin-panel)
  		- [159. Accessing the OpenLiteSpeed Custom Panel](#159-accessing-the-openlitespeed-custom-panel)
-   
-   - [What´s next?](#What´s_next_?)
+      - [Signature.txt](#Signature.txt)
+      - 
+
 
 
  [Part 4️⃣: Evaluation Criteria](#Part-4️⃣-Evaluation-Criteria)
@@ -3893,7 +3894,7 @@ Finalize the process by adding the file to git, committing, and pushing it to th
 🚨 **CAUTION: DO NOT OPEN THE VIRTUAL MACHINE AGAIN!!!!** 🚨
 
 
-### What´s next?
+
 
 
 # Congratulations!! 🥳 WHAT AN IMPRESSIVE ACHIEVEMENT!!!!  🤘
