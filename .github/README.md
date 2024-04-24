@@ -213,9 +213,11 @@
   		- [157. Configure the Firewall](#157-configure-the-firewall)
   		- [158. Accessing the OpenLiteSpeed Admin Panel](#158-accessing-the-openlitespeed-admin-panel)
  		- [159. Accessing the OpenLiteSpeed Custom Panel](#159-accessing-the-openlitespeed-custom-panel)
-      - [Signature.txt](#Signature.txt)
-      - 
 
+    - [Signature.txt](#Signature.txt)
+                - [160. Open Terminal on Your Mac](#open-terminal-on-your-mac)
+                - [161. Navigate to the VM's Directory](#navigate-to-the-vms-directory)
+                - [162. Execute the shasum Command](#execute-the-shasum-command)
 
 
  [Part 4️⃣: Evaluation Criteria](#Part-4️⃣-Evaluation-Criteria)
@@ -3829,16 +3831,16 @@ After setting up OpenLiteSpeed and adjusting its administrative password, you mi
 
 How to get the signature of your virtual machine:
 
-#### Open Terminal on Your Mac
+#### 160. Open Terminal on Your Mac
 
 First, you need to open the Terminal application on your Mac. 
 
 
-#### Navigate to the VM's Directory
+#### 161. Navigate to the VM's Directory
 
 Before calculating the SHA-1 hash, you need to navigate to the directory where your virtual machine's disk file is stored. 
 
-#### Execute the shasum Command
+#### 162. Execute the shasum Command
 
 With the terminal navigated to the directory containing your VM's disk file, execute the shasum command to generate the SHA-1 hash of the .vdi file:
 
