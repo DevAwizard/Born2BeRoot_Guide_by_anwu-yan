@@ -214,11 +214,11 @@
   		- [158. Accessing the OpenLiteSpeed Admin Panel](#158-accessing-the-openlitespeed-admin-panel)
  		- [159. Accessing the OpenLiteSpeed Custom Panel](#159-accessing-the-openlitespeed-custom-panel)
 
-    - [Signature.txt](#Signature.txt)
+    - [Signature.txt](#Signaturetxt)
 
-        - [160. Open Terminal on Your Mac](#open-terminal-on-your-mac)
-        - [161. Navigate to the VM's Directory](#navigate-to-the-vms-directory)
-        - [162. Execute the shasum Command](#execute-the-shasum-command)
+        - [160. Open Terminal on Your Mac](#160-open-terminal-on-your-mac)
+        - [161. Navigate to the VM's Directory](#161-navigate-to-the-vms-directory)
+        - [162. Execute the shasum Command](#162-execute-the-shasum-command)
 
 
  [Part 4️⃣: Evaluation Criteria](#Part-4️⃣-Evaluation-Criteria)
