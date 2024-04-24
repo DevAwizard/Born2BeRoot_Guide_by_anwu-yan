@@ -20,17 +20,21 @@
     - [Step 3: Create a New Virtual Machine](#Step-3-Create-a-New-Virtual-Machine)
     - [Step 4: Configure Your VM](#Step-4-Configure-Your-VM)
     - [Step 5: Install Debian or Rocky on Your VM](#Step-5-Install-Debian-or-Rocky-on-Your-VM)
+
 4. [Installation Process](#installation-process)
     -  [Getting Started](#getting-started)
         -  [1. Start Installation](#1-start-installation)
         -  [2.Choose Preferred Language](#2-choose-preferred-language)
+    
     - [Language and Location Configuration](#language-and-location-configuration)
         -  [3. Choose Location](#3-choose-location)
         -  [4. Choose Continent or Region](#4-choose-continent-or-region)
         -  [5. Choose Country](#5-choose-country)
+
     - [User Configuration](#user-configuration)
         -  [6. Configure Keyboard](#6-configure-keyboard)
         -  [7. Choose Hostname](#7-choose-hostname)
+
     - [Security Settings](#security-settings)
         -  [8. Skip Domain Name](#8-skip-domain-name)
         -  [9. Set Up Root Password](#9-set-up-root-password)
@@ -40,6 +44,7 @@
         -  [13. Choose Password for New User](#13-choose-password-for-new-user)
         -  [14.Re-enter New User Password](#14-re-enter-new-user-password)
         -  [15.Select Time Zone Location](#15-select-time-zone-location)
+
     - [Partitioning and Storage](#partitioning-and-storage)
         -  [16. Select Partitioning Method](#16-select-partitioning-method)
         -  [17. Manual Partitioning - Select Partition](#17-manual-partitioning---select-partition)
@@ -56,6 +61,7 @@
         -  [28. Manual Partitioning - Second Disk Type](#28-manual-partitioning---second-disk-type)
         -  [29. Setting Logical Partition](#29-setting-logical-partition)
         -  [30. Primary and Logical Setup Complete](#30-primary-and-logical-setup-complete)
+    
     - [LVM Configuration](#lvm-configuration)
         -  [31. Configure LVM](#31-configure-lvm)
         -  [32. LVM - Write Changes](#32-lvm---write-changes)
@@ -73,6 +79,7 @@
         -  [44. Partition Configuration Overview](#44-partition-configuration-overview)
         -  [45. Partition Settings Overview](#45-partition-settings-overview)
         -  [46. Format the partition case](#46-format-the-partition-case)
+    
     - [Encryption Configuration](#encryption-configuration)
         -  [47. Configure Encrypted Volumes](#47-configure-encrypted-volumes)
         -  [48. Encryption - Write Changes](#48-encryption---write-changes)
@@ -83,14 +90,17 @@
         -  [53. Enter Encryption Passphrase](#53-enter-encryption-passphrase)
         -  [54. Review Encrypted Partition Overview](#54-review-encrypted-partition-overview)
         -  [55. Complete Overview of Encrypted Partition](#55-complete-overview-of-encrypted-partition)
-5. [Post Installation Steps](#post-installation-steps)
+
+6. [Post Installation Steps](#post-installation-steps)
    - [Error Handling and Troubleshooting](#error-handling-and-troubleshooting)
         -  [57. In Case of Errors](#57-in-case-of-errors)
+    
     - [Repository and Network Configuration](#repository-and-network-configuration)
         -  [58. Reconfigure LVM](#58-reconfigure-lvm)
         -  [59. Review Encrypted Partition](#59-review-encrypted-partition)
         -  [60. Write Changes to Disk](#60-write-changes-to-disk)
         -  [61. Troubleshoot Encryption Errors](#61-troubleshoot-encryption-errors)
+
     - [Software Selection](#software-selection)
         -  [62. Scan Additional Installation Media](#62-scan-additional-installation-media)
         -  [63. Select Mirror Country](#63-select-mirror-country)
@@ -98,56 +108,67 @@
         -  [65. Enter HTTP Proxy Information](#65-enter-http-proxy-information)
         -  [66. Software Installation Process](#66-software-installation-process)
         -  [67. Choose Software to Install](#67-choose-software-to-install)
+
     - [Configuration boot grub](#Configuration-boot-grub)
         -  [68. GRUB Boot Loader](#68-grub-boot-loader)
         -  [69. Device for Boot Loader Installation](#69-device-for-boot-loader-installation)
+    
     - [Finishing installation](#Finishing-installation)
         -  [70. Finish Installation](#70-finish-installation)
         -  [71. Installation Complete](#71-installation-complete)
       
    [Part 2️⃣: Operating System Configuration](#part-2️⃣-operating-system-configuration)
+    
     - [Initial Setup and Access](#Initial-Setup-and-Access)
         -  [72 Starting VirtualBox](#71-starting-virtualbox)
         -  [73. Verifying User Credentials for System Access](#73-verifying-user-credentials-for-system-access)
         -  [74. Understanding and Using User Prompts](#74-understanding-and-using-user-prompts)
         -  [75. Using su to Switch Users](#75-using-su-to-switch-users)
         -  [76. Understanding and Using Root User Prompts](#76-understanding-and-using-root-user-prompts)
+    
     - [Package Management and sudo Installation](#Package-Management-and-sudo-Installation)
         -  [77. Installing apt (Advance Package Tool)](#77-installing-apt-advance-package-tool)
         -  [78. Installing sudo on a Linux system](#78-installing-sudo-on-a-linux-system)
         -  [79. Sudo reboot command](#79-sudo-reboot-command)
         -  [80. APT Check Verification](#80-apt-check-verification)
         -  [81. Verifying sudo Installation and Configuration](#81-verifying-sudo-installation-and-configuration)
-     - [User Management](#User-Management)
+    
+    - [User Management](#User-Management)
         -  [82. Creating a User with Your Login Name](#82-creating-a-user-with-your-login-name)
         -  [83. Adding a User to a Group](#83-adding-a-user-to-a-group)
         -  [84. Verifying User Group Creation](#84-verifying-user-group-creation)
         -  [85. Verifying User Group Memberships for Corresponding Usernames](#85-verifying-user-group-memberships-for-corresponding-usernames)
-     - [SSH Configuration](#SSH-Configuration)
+     
+    - [SSH Configuration](#SSH-Configuration)
         -  [86. Executing sudo apt update During SSH Terminal Configuration](#86-executing-sudo-apt-update-during-ssh-terminal-configuration)
         -  [87. Installing OpenSSH Server](#87-installing-openssh-server)
         -  [88. Verifying SSH Terminal Installation and Configuration](#88-verifying-ssh-terminal-installation-and-configuration)
         -  [89. Configuring SSH Terminal Service](#89-configuring-ssh-terminal-service)
         -  [90. Editing SSH Server Configuration](#90-editing-ssh-server-configuration)
         -  [91. Restarting SSH Service and Verification](#91-restarting-ssh-service-and-verification)
-     - [Firewall Setup](#Firewall-Setup)
+     
+    - [Firewall Setup](#Firewall-Setup)
         -  [92. Setting Up UFW (Uncomplicated Firewall)](#92-setting-up-ufw-uncomplicated-firewall)
         -  [93. Enabling UFW Firewall Protection](#93-enabling-ufw-firewall-protection)
         -  [94. Allowing Connections on Port](#94-allowing-connections-on-port)
         -  [95. Verifying UFW Status](#95-verifying-ufw-status)
-     - [Configuring Sudo Settings](#Configuring-Sudo-Settings)
+    
+    - [Configuring Sudo Settings](#Configuring-Sudo-Settings)
         -  [96. Strengthening System Security: Creating a Strong Password](#96-Strengthening-System-Security-Creating-a-Strong-Password)
         -  [97. Creating sudo Directory for Command Logs](#97-creating-sudo-directory-for-command-logs)
         -  [98. Editing the sudo Configuration File](#98-editing-the-sudo-configuration-file)
         -  [99. Verification of Sudo Configuration Changes](#99-verification-of-sudo-configuration-changes)
-     - [Strong Password Policy Configuration](#Strong-Password-Policy-Configuration)
+     
+    - [Strong Password Policy Configuration](#Strong-Password-Policy-Configuration)
         -  [100. Editing the login.defs File](#100-editing-the-logindefs-file)
         -  [101. Configuring Strong Password Policy in login.defs File](#101-configuring-strong-password-policy-in-logindefs-file)
         -  [102. Installing Required Packages for Password Policy Configuration](#102-installing-required-packages-for-password-policy-configuration)
         -  [103. Editing common-password Configuration File](#103-editing-common-password-configuration-file)
-     - [Connecting to SSH terminal](#Connecting-to-SSH-terminal)
+
+    - [Connecting to SSH terminal](#Connecting-to-SSH-terminal)
         -  [104. Setting Up SSH Access in VirtualBox](#104-Setting-Up-SSH-Access-in-VirtualBox)
-     - [Script configuration](#Script-configuration)
+
+    - [Script configuration](#Script-configuration)
         -  [105. Script Section: Architecture](#105-script-section-architecture)
         -  [106. Counting Physical Cores](#106-counting-physical-cores)
         -  [107. Virtual Cores](#107-virtual-cores)
@@ -162,15 +183,18 @@
         -  [116. Obtaining the MAC Address](#116-obtaining-the-mac-address)
         -  [117. Counting Commands Executed with Sudo](#117-counting-commands-executed-with-sudo)
         -  [118. Total Script Execution Result](#118-total-script-execution-result)
-     - [Crontab Configuration](#crontab-configuration)
+     
+    - [Crontab Configuration](#crontab-configuration)
         -  [119. Understanding and Configuring Crontab for Scheduled Tasks](#119-understanding-and-configuring-crontab-for-scheduled-tasks)
           
    ​[Part 3️⃣: Advanced System Configuration and Web Services](#part-3️⃣-advanced-system-configuration-and-web-services)
+     
      -  [Lighttpd](#lighttpd)
 		-  [120. Package Installation](#120-package-installation)
   		-  [121. Allowing Connections Through Port 80](#121-allowing-connections-through-port-80)
   		-  [122. Verifying Port 80 is Allowed](#122-verifying-port-80-is-allowed)
   		-  [123. Adding a Rule for Port 80](#123-adding-a-rule-for-port-80)
+     
      - [WordPress](#wordpress)
  		-  [124. Installing wget and zip](#124-installing-wget-and-zip)
   		-  [125. Navigating to the /var/www/ Directory](#125-navigating-to-the-varwww-directory)
@@ -179,6 +203,7 @@
   		-  [128. Renaming the html Directory](#128-renaming-the-html-directory)
   		-  [129. Renaming the WordPress Directory](#129-renaming-the-wordpress-directory)
   		-  [130. Setting Permissions for the html Directory](#130-setting-permissions-for-the-html-directory)
+     
      - [Mariadb](#mariadb)
   		-  [131. Installing MariaDB Server Packages](#131-installing-mariadb-server-packages)
   		-  [132. Securing MariaDB Installation](#132-securing-mariadb-installation)
@@ -189,8 +214,10 @@
   		-  [137. Granting Privileges to the New User](#137-granting-privileges-to-the-new-user)
   		-  [138. Flushing Privileges](#138-flushing-privileges)
   		-  [139. Exiting MariaDB](#139-exiting-mariadb)
+     
      - [PHP](#php)
   		-  [140. Installing PHP Packages](#140-installing-php-packages)
+     
      - [WordPress Configuration](#wordpress-configuration)
   		- [141. Accessing the Web Directory](#141-accessing-the-web-directory)
   		- [142. Copying the WordPress Configuration File](#142-copying-the-wordpress-configuration-file)
@@ -198,6 +225,7 @@
   		- [144. Enabling the FastCGI Module in Lighttpd](#144-enabling-the-fastcgi-module-in-lighttpd)
   		- [145. Enabling the FastCGI-PHP Module in Lighttpd](#145-enabling-the-fastcgi-php-module-in-lighttpd)
   		- [146. Applying Configuration Changes](#146-applying-configuration-changes)
+     
      - [WordPress Site](#WordPress-Site)
   		- [147. Accessing Your Site](#147-accessing-your-site)
   		- [148. Fill Out the Installation Form](#148-fill-out-the-installation-form)
@@ -205,6 +233,7 @@
   		- [150. Accessing Your Site Again](#150-accessing-your-site-again)
   		- [151. Logging into the Admin Panel](#151-logging-into-the-admin-panel)
   		- [152. Customizing Your Site](#152-customizing-your-site)
+     
      - [Additional Services](#additional-services)
   		- [153. Update the System to Install LiteSpeed](#153-update-the-system-to-install-lite-speed)
   		- [154. Add OpenLiteSpeed Repository](#154-add-openlitespeed-repository)
