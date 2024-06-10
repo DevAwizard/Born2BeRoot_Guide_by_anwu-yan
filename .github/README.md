@@ -1,5 +1,7 @@
   # Documentation: Creating a VirtualBox VM with bonus ​👩🏻‍💻​​
 
+![cover-born2beroot-bonus](https://github.com/DevAwizard/Born2BeRoot_by_anwu-yan/assets/153505451/4d2be31f-a61f-4ad2-9c53-2aafdf935873)
+
   # 💥 The best tutorial of BORN TO BE ROOT 42 global 2024 🔥
 
   # Done by anwu-yan 42 URDULIZ
