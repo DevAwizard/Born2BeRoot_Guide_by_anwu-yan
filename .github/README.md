@@ -3036,7 +3036,7 @@ Here's a breakdown of how crontab works and how to use it:
 ---
 
 
-## Part 3️⃣: Advanced System Configuration and Web Services
+## Part 3️⃣: Advanced System Configuration and Web Services (BONUS PART)
 
 In this segment, we delve into advanced system configuration, starting with the setup of a WordPress site powered by lighttpd, MariaDB, and PHP. This process is meticulously guided to ensure a smooth and functional setup. Beyond the WordPress installation, participants are encouraged to select and implement an additional service of their choosing, with the rationale for this choice being its utility and contribution to the system's overall functionality. A significant focus is placed on security measures and performance tuning, aiming to craft a system that is not only secure but also operates efficiently.
 
