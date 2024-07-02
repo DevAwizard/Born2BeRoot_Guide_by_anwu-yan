@@ -306,7 +306,7 @@ In the first segment of our project, we will dive into the initial steps of virt
    - Go to the [VirtualBox website](https://www.virtualbox.org/wiki/Downloads) and download the latest version for macOS.
 
 
-![Name_&OperatingSystem](../Screenshots/VirtualBox_website.png)
+![Name_&OperatingSystem](/Screenshots/VirtualBox_website.png)
 
 
 2. **Install VirtualBox**:
