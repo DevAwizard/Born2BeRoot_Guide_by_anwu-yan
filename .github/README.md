@@ -170,7 +170,7 @@
     - [Connecting to SSH terminal](#Connecting-to-SSH-terminal)
         -  [104. Setting Up SSH Access in VirtualBox](#104-Setting-Up-SSH-Access-in-VirtualBox)
 
-    - [Script configuration](#Script-configuration)
+    - [Script configuration](#Script-configuration) **New update 🌝 Ubuntu Version Available ▶️**
         -  [105. Script Section: Architecture](#105-script-section-architecture)
         -  [106. Counting Physical Cores](#106-counting-physical-cores)
         -  [107. Virtual Cores](#107-virtual-cores)
@@ -1850,6 +1850,115 @@ Confirm that the SSH server is now listening on port 4242. You can do this by ex
 **It is expected to resemble this**
 
 ![verfication_restart_ssh](../Screenshots/verfication_restart_ssh.png)
+
+
+## Ubuntu version
+
+
+1. **Obtain the Virtual Machine's IP Address**:
+   - Run the following on your virtual machine:
+     ```sh
+     ip a
+     ```
+   - This will display information about all the network interfaces. Look for the network interface that has an inet address. The IP address will appear in the following format. Look for the `inet` value under the active network interface (e.g., `eth0` or `ens33`).
+  
+   ```sh
+   2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 00:0c:29:6b:7c:58 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.1.100/24 brd 192.168.1.255 scope global dynamic ens33
+       valid_lft 86395sec preferred_lft 86395sec
+   ```
+
+    In this example, the IP address is `192.168.1.100`.
+
+    The name of the interface (e.g., ens33 or eth0) might vary based on your configuration.
+
+   Alternatively, use:
+   ```sh
+   hostname -I
+   ```
+   
+  This will give you the IP address directly without the extra information. Like the following example:
+  
+  ```sh
+   10.14.5.6 192.168.122.1 172.17.0.1 
+  ```
+
+Once you have this info, you can proceed with the configuration of your virtual machine
+
+
+1. **Ensure SSH is Running on Port 4242**:
+
+Make sure that your virtual machine's SSH server is configured to use port 4242. Check your SSH configuration file (/etc/ssh/sshd_config) and ensure that this line is present:
+
+   - Open and edit the SSH configuration file:
+     ```bash
+     sudo nano /etc/ssh/sshd_config
+     ```
+   - Ensure the `Port 4242` directive is present:
+     ```sh
+     Port 4242
+     ```
+   - Restart the SSH service after making changes:
+     ```bash
+     sudo systemctl restart ssh
+     ```
+
+2. **Port Forwarding in VirtualBox**:
+   - Open **Settings** > **Network** >  Choose **Adapter 1** (or the adapter you're using) and ensure it's set to **NAT** > **Advanced** > **Port Forwarding** in VirtualBox.
+   -  In the port forwarding settings, configure the following:
+     - **Name (Nombre)**: Give it a name (e.g., Rule 1) or anything descriptive
+     - **Protocol**: TCP.
+     - **Host IP (IP Anfitrion)**: `192.168.56.1`  (this is your host machine’s IP).
+     - **Host Port (Puerto Anfitrion)**: `4242` (the port you'll connect to from the host machine).
+     - **Guest IP(IP Invitado)**: `10.2.0.15` (this is your virtual machine’s IP).
+     - **Guest Port(Puerto Invitado)**: `4242`  (the port your virtual machine is using for SSH).
+   - **Save the Port Forwarding Rule**: After configuring the rule, save it by clicking **OK**.
+  
+![image](https://github.com/user-attachments/assets/147a310c-8b41-4497-9d36-81cd1e4b9f04)
+
+3. **Allow SSH Traffic Through the Firewall (Optional)**:
+   - If using UFW, ensure port 4242 is allowed:
+     ```sh
+     sudo ufw allow 4242/tcp
+     ```
+
+4. **SSH Connection from Local Machine**:
+   - Use the following SSH command to connect to your virtual machine:
+     ```bash
+     ssh <username>@<vm-ip-address> -p 4242
+     ```
+   - For example:
+     ```bash
+     ssh john@192.168.56.101 -p 4242
+     ```
+
+5. **Authentication**:
+   - After running the SSH command, you'll be prompted to enter your password for the virtual machine user. Enter it, and you should be logged in to the virtual machine from your terminal.
+
+
+### **Additional Troubleshooting Tips**:
+
+1. **Ensure Virtual Machine is Accessible**:
+   - **Ping the Virtual Machine** from your local machine to ensure it's reachable:
+     ```bash
+     ping <vm-ip-address>
+     ```
+   - Example:
+     ```bash
+     ping 192.168.56.101
+     ```
+
+2. **Check SSH Status**:
+   - Make sure SSH is running on the virtual machine:
+     ```bash
+     sudo systemctl status ssh
+     ```
+
+3. **Test Different Network Adapters**:
+   - If NAT with port forwarding doesn't work, try switching to **Bridged Adapter** in VirtualBox settings. This will give your VM a network IP that is directly accessible from your local machine, but still ensure your SSH settings (like port 4242) are correct.
+
+
 
 
 ###  Firewall Setup
