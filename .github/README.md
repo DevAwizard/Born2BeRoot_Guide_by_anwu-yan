@@ -1,8 +1,10 @@
 ![cover-born2beroot-bonus](https://github.com/DevAwizard/Born2BeRoot_by_anwu-yan/assets/153505451/4d2be31f-a61f-4ad2-9c53-2aafdf935873)
 
 
-**# Ultimate Guide: Creating a VirtualBox VM with SSH Setup (Ubuntu version available) & Bonus Tips 🖥️🔥 | 42 Global 2024 Edition**
+# Ultimate Guide: Creating a VirtualBox VM with SSH Setup (Ubuntu version available) & Bonus Tips 🖥️🔥 | 42 Global 2024 Edition
 
+
+### 💥 The best tutorial of BORN TO BE ROOT 42 global 2024 🔥
 
 This title maintains the excitement of the original but improves clarity, while also making the tutorial's content clear and easy to understand for readers.
 
