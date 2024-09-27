@@ -147,7 +147,7 @@
         -  [88. Verifying SSH Terminal Installation and Configuration](#88-verifying-ssh-terminal-installation-and-configuration)
         -  [89. Configuring SSH Terminal Service](#89-configuring-ssh-terminal-service)
         -  [90. Editing SSH Server Configuration](#90-editing-ssh-server-configuration)
-        -  [91. Restarting SSH Service and Verification](#91-restarting-ssh-service-and-verification)
+        -  [91. Restarting SSH Service and Verification](#91-restarting-ssh-service-and-verification)  **New update 🌝 Ubuntu Version Available 🔽**
      
     - [Firewall Setup](#Firewall-Setup)
         -  [92. Setting Up UFW (Uncomplicated Firewall)](#92-setting-up-ufw-uncomplicated-firewall)
@@ -170,7 +170,7 @@
     - [Connecting to SSH terminal](#Connecting-to-SSH-terminal)
         -  [104. Setting Up SSH Access in VirtualBox](#104-Setting-Up-SSH-Access-in-VirtualBox)
 
-    - [Script configuration](#Script-configuration) **New update 🌝 Ubuntu Version Available ▶️**
+    - [Script configuration](#Script-configuration) 
         -  [105. Script Section: Architecture](#105-script-section-architecture)
         -  [106. Counting Physical Cores](#106-counting-physical-cores)
         -  [107. Virtual Cores](#107-virtual-cores)
@@ -184,7 +184,7 @@
         -  [115. Obtaining the IP Address](#115-obtaining-the-ip-address)
         -  [116. Obtaining the MAC Address](#116-obtaining-the-mac-address)
         -  [117. Counting Commands Executed with Sudo](#117-counting-commands-executed-with-sudo)
-        -  [118. Total Script Execution Result](#118-total-script-execution-result)
+        -  [118. Total Script Execution Result](#118-total-script-execution-result) 
      
     - [Crontab Configuration](#crontab-configuration)
         -  [119. Understanding and Configuring Crontab for Scheduled Tasks](#119-understanding-and-configuring-crontab-for-scheduled-tasks)
