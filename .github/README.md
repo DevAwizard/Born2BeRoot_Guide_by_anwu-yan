@@ -1855,7 +1855,6 @@ Confirm that the SSH server is now listening on port 4242. You can do this by ex
 
 ## Ubuntu version New update 🌝
 
-
 1. **Obtain the Virtual Machine's IP Address**:
    - Run the following on your virtual machine:
      ```sh
@@ -1959,6 +1958,70 @@ Make sure that your virtual machine's SSH server is configured to use port 4242.
 3. **Test Different Network Adapters**:
    - If NAT with port forwarding doesn't work, try switching to **Bridged Adapter** in VirtualBox settings. This will give your VM a network IP that is directly accessible from your local machine, but still ensure your SSH settings (like port 4242) are correct.
 
+
+If the previous steps do not work, follow these additional troubleshooting steps
+
+
+#### Step 1: Configure Port Forwarding in the Virtual Machine
+
+1. **Open VM Settings:**
+   - Start by opening your virtualization software (e.g., VirtualBox).
+   - Navigate to the settings of the virtual machine that you want to connect to via SSH.
+
+2. **Network Settings:**
+   - Go to the "Network" section in the virtual machine settings.
+   - Make sure the **Network Adapter** is set to **NAT** mode.
+
+3. **Set Up Port Forwarding Rules:**
+   - Within the "Network" settings, click on the **Port Forwarding** option. This step is critical to ensure that SSH requests from your host machine are properly routed to the virtual machine.
+   - Add a new rule for port forwarding. This allows requests coming to your local system on a specific port to be forwarded to the guest system (your virtual machine).
+
+4. **Configure the Port Forwarding Rule:**
+   - **Name**: Provide a name like "Rule 1" to identify the rule.
+   - **Protocol**: Set it to **TCP**.
+   - **Host IP**:  Set it to `127.0.0.1` to allow access from your local system only. **This IP address is your local terminal IP, not the virtual machine IP**.
+   - **Host Port**: Set it to `4242` (or any other available port on your local system). This is the port you will use to connect from your local terminal.
+   - **Guest IP**: Leave this field **blank**. This allows the virtual machine to decide which internal IP to use.
+   - **Guest Port**: Set it to `4242`. This is the default port for SSH on your virtual machine.
+
+![sudo-NAT-Port forwarding rules](../Screenshots/NAT_Port_forwarding_rules.png)
+
+#### Step 2: Start the Virtual Machine
+
+- After configuring the port forwarding rules, start the virtual machine to apply the changes.
+
+#### Step 3: Connect from Local Terminal via SSH
+
+1. **Open Local Terminal:**
+   - Open a terminal on your host system (your local machine).
+
+2. **Run the SSH Command to Connect to the VM:**
+   - Use the following `ssh` command to initiate the connection:
+     ```sh
+     ssh <username>@127.0.0.1 -p 4242
+     ```
+     - Replace `<username>` with the username configured on the virtual machine.
+     - The IP address `127.0.0.1` is used because it refers to the local machine, and the port `4242` is forwarded to the virtual machine’s SSH port.
+
+3. **Authentication:**
+   - When prompted, enter the password for the user account on the virtual machine.
+
+   This will establish an SSH connection to the VM as if it were running on your local machine.
+
+![sudo-NAT-Port forwarding rules](../Screenshots/Ubuntu_ssh_configuration.png)
+
+#### Troubleshooting Tips
+
+- **No Route to Host/Error Connecting:**
+  - Double-check the **port forwarding settings** to ensure all fields are correctly configured.
+  - Ensure that the **virtual machine is running** when you attempt the SSH connection.
+  - Verify that the **firewall** settings on both your local system and the VM are not blocking the SSH connection.
+  
+- **Authentication Issues:**
+  - If connecting for the first time, SSH will prompt you to confirm the host key. Type `yes` to proceed.
+
+- **Leave Host IP Blank if There Are Issues:**
+  - If you’re facing issues, leave the **Host IP** field blank in the port forwarding configuration to allow access from any network interface on the host machine.
 
 
 
